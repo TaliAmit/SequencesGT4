@@ -1,5 +1,4 @@
-#ifndef GOBBLER_H
-#define GOBBLER_H
+#pragma once
 
 #include "../headers/enums.h"
 
@@ -8,7 +7,7 @@ class Gobbler
 public:
 	explicit Gobbler(const PlayerColor gobblerColor, const GoblerSize gobblerSize);
 
-	Gobbler(const Gobbler&) = delete;
+	Gobbler(const Gobbler&) = default;
 	~Gobbler() = default;
 
 	PlayerColor getColor() const;
@@ -22,6 +21,5 @@ private:
 	GoblerSize m_size;
 };
 
-#endif
 
 
