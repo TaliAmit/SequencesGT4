@@ -1,21 +1,10 @@
-#pragma once
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include <vector>
-#include "Gobbler.h"
+#include "../headers/Gobbler.h"
+#include "../headers/enums.h"
 
-enum PlayerType
-{
-	HUMAN,
-	BOT
-};
-
-
-enum PlayerColor
-{
-	BLUE,
-	RED,
-	GREEN,
-	ORANGE
-};
 
 
 class Player
@@ -29,10 +18,10 @@ public:
 	PlayerColor getColor() const;
 
 	void setType(PlayerType type);
-	void setColor(PlayerColor color); 
+	void setColor(PlayerColor color);
 
 
-	 
+
 
 private:
 	std::vector<Gobbler> m_hand;
@@ -41,6 +30,6 @@ private:
 };
 
 
-
+#endif
 
 

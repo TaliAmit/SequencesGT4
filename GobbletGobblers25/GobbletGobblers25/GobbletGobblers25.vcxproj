@@ -132,15 +132,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\01_hello_SDL\01_hello_SDL.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Gobbler.cpp" />
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\Gobbler.cpp" />
+    <ClCompile Include="src\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Gobbler.h" />
-    <ClInclude Include="Player.h" />
+    <ClInclude Include="headers\Game.h" />
+    <ClInclude Include="headers\Gobbler.h" />
+    <ClInclude Include="headers\Player.h" />
+    <ClInclude Include="headers\enums.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,17 +1,12 @@
-#pragma once
-#include "Player.h"
+#ifndef GOBBLER_H
+#define GOBBLER_H
 
-enum GoblerSize
-{
-	SMALL,
-	MEDIUM,
-	LARGE
-};
+#include "../headers/enums.h"
 
 class Gobbler
 {
 public:
-	explicit Gobbler(const PlayerColor gobblerColor, const GoblerSize gobblerSize); 
+	explicit Gobbler(const PlayerColor gobblerColor, const GoblerSize gobblerSize);
 
 	Gobbler(const Gobbler&) = delete;
 	~Gobbler() = default;
@@ -19,7 +14,7 @@ public:
 	PlayerColor getColor() const;
 	GoblerSize getSize() const;
 
-	void setColor(PlayerColor gobblerColor); 
+	void setColor(PlayerColor gobblerColor);
 	void setSize(GoblerSize gobblerSize); // for future use (?)
 
 private:
@@ -27,5 +22,6 @@ private:
 	GoblerSize m_size;
 };
 
+#endif
 
 

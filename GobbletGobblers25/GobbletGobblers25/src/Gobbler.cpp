@@ -1,5 +1,5 @@
-#include "Gobbler.h"
-#include "Player.h"
+#include "../headers/Gobbler.h"
+#include "../headers/Player.h"
 
 Gobbler::Gobbler(const PlayerColor gobblerColor, const GoblerSize gobblerSize)
 	: m_color(gobblerColor)
