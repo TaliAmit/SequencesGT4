@@ -1,11 +1,12 @@
 #pragma once
 
-enum GoblerSize
+enum GobblerSize
 {
 	SMALL,
 	MEDIUM,
 	LARGE
 };
+
 
 enum PlayerColor
 {

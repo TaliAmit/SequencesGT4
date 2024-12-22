@@ -5,20 +5,20 @@
 class Gobbler
 {
 public:
-	explicit Gobbler(const PlayerColor gobblerColor, const GoblerSize gobblerSize);
+	explicit Gobbler(const PlayerColor gobblerColor, const GobblerSize gobblerSize);
 
-	Gobbler(const Gobbler&) = default;
+	Gobbler(const Gobbler&) = default; // std::vector::insert, std::stack::push
 	~Gobbler() = default;
 
 	PlayerColor getColor() const;
-	GoblerSize getSize() const;
+	GobblerSize getSize() const;
 
 	void setColor(PlayerColor gobblerColor);
-	void setSize(GoblerSize gobblerSize); // for future use (?)
+	void setSize(GobblerSize gobblerSize); // future use
 
 private:
 	PlayerColor m_color;
-	GoblerSize m_size;
+	GobblerSize m_size;
 };
 
 
