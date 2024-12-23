@@ -1,19 +1,15 @@
 #include "../headers/Cell.h"
-
+#include <cassert>
 
 Cell::Cell()
 {
 
 }
 
-bool Cell::addGobbler(Gobbler* gobbler)
+void Cell::addGobbler(Gobbler* gobbler)
 {
-	if (gobbler != nullptr)
-	{
-		m_gobblers.push(gobbler);
-		return true;
-	}
-	return false;
+	assert(gobbler != nullptr);
+	m_gobblers.push(gobbler);
 }
 
 Gobbler* Cell::getTopGobbler() const
@@ -27,10 +23,8 @@ Gobbler* Cell::getTopGobbler() const
 
 void Cell::removeTopGobbler()
 {
-	if (!isEmpty())
-	{
-		m_gobblers.pop();
-	}
+	assert(!isEmpty());
+	m_gobblers.pop();
 }
 
 bool Cell::isEmpty() const

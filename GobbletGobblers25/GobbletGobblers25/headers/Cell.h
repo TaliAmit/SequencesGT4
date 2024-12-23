@@ -12,7 +12,7 @@ public:
 	Cell& operator=(Cell&&) = delete;
 	~Cell() = default;
 
-	bool addGobbler(Gobbler* gobbler);
+	void addGobbler(Gobbler* gobbler);
 	Gobbler* getTopGobbler() const;
 	void removeTopGobbler();
 
