@@ -1,7 +1,7 @@
 #include "../headers/Gobbler.h"
 #include "../headers/Player.h"
 
-Gobbler::Gobbler(const PlayerColor gobblerColor, const GobblerSize gobblerSize)
+Gobbler::Gobbler(PlayerColor gobblerColor, GobblerSize gobblerSize)
 	: m_color(gobblerColor)
 	, m_size(gobblerSize)
 {

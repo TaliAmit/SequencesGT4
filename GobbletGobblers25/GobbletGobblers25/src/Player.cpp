@@ -1,4 +1,4 @@
-//#include "../headers/Init.h"
+#include "../headers/Init.h"
 #include "../headers/Player.h"
 
 Player::Player(const PlayerType type, const PlayerColor color)
@@ -19,9 +19,9 @@ PlayerColor Player::getColor() const
 	return m_color;
 }
 
-Gobbler* Player::getGobblerFromHand(int index) const
+Gobbler* Player::getGobblerFromHand(size_t index) const
 {
-	if (index >= 0 && index < 6/*NUM_OF_GOBBLERS*/)
+	if (index < NUM_OF_GOBBLERS)
 	{
 		return m_hand[index];
 	}
@@ -30,20 +30,20 @@ Gobbler* Player::getGobblerFromHand(int index) const
 }
 
 
-void Player::setType(const PlayerType type)
+void Player::setType(PlayerType type)
 {
 	m_type = type;
 }
 
-void Player::setColor(const PlayerColor color)
+void Player::setColor(PlayerColor color)
 {
 	m_color = color;
 }
 
 
-void Player::removeGobblerFromHand(int index)
+void Player::removeGobblerFromHand(size_t index)
 {
-	if (index >= 0 && index < 6/*NUM_OF_GOBBLERS*/)
+	if (index < NUM_OF_GOBBLERS)
 	{
 		m_hand[index] = nullptr;
 	}
@@ -51,7 +51,7 @@ void Player::removeGobblerFromHand(int index)
 
 void Player::insertAllGobblersToHand()
 {
-	for (int i = 0; i < 6/*NUM_OF_GOBBLERS*/; ++i)
+	for (int i = 0; i < NUM_OF_GOBBLERS; ++i)
 	{
 		m_hand[i] = &m_gobblers[i];
 	}
@@ -60,7 +60,7 @@ void Player::insertAllGobblersToHand()
 
 void Player::initHand()
 {
-	for (int i = 0; i < 6/*NUM_OF_GOBBLERS*/; ++i)
+	for (int i = 0; i < NUM_OF_GOBBLERS; ++i)
 	{
 		m_hand.push_back(nullptr);
 	}
