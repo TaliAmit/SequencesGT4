@@ -136,11 +136,20 @@
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\Gobbler.cpp" />
     <ClCompile Include="src\Player.cpp" />
+	<ClCompile Include="src\Cell.cpp" />
+	<ClCompile Include="src\Board.cpp" />
+	<ClCompile Include="src\ResourcesManager.cpp" />
+	<ClCompile Include="src\Rules.cpp" />
+	  
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\Game.h" />
     <ClInclude Include="headers\Gobbler.h" />
     <ClInclude Include="headers\Player.h" />
+	<ClInclude Include="headers\Cell.h" />
+	<ClInclude Include="headers\Board.h" />
+	<ClInclude Include="headers\ResourcesManager.h" />
+	<ClInclude Include="headers\Rules.h" />
     <ClInclude Include="headers\enums.h" />
     <ClInclude Include="headers\Init.h" />
   </ItemGroup>
