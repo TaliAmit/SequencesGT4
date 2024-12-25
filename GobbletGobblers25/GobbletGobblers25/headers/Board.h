@@ -6,14 +6,7 @@
 class Board
 {
 public:
-	/**
-	 * @brief Constructs a Board object with the specified number of rows and columns.
-	 * @param rows The number of rows on the board. Default is 3.
-	 * @param cols The number of columns on the board. Default is 3.
-	 *
-	 * @note The number of rows and columns must be positive.
-	 */
-	explicit Board(size_t rows = 3, size_t cols = 3);
+	explicit Board();
 
 	Board(const Board&) = delete;
 	Board& operator=(const Board&) = delete;

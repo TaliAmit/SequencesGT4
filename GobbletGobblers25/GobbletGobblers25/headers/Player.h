@@ -84,6 +84,16 @@ private:
      */
     void createGobblers();
 
+    /**
+     * @brief Creates a specific number of Gobblers of a given size.
+     * @param size: The size of the Gobblers to create (GobblerSize type).
+     * @param numOfGobblers: The number of Gobblers to create of the specified size.
+     *
+     * This function creates and adds a specified number of Gobblers of a given size
+     * to the Player's collection of Gobblers (m_gobblers).
+     */
+    void createGobblers(GobblerSize size, size_t numOfGobblers);
+
 private:
     std::vector<Gobbler> m_gobblers; /**< The collection of all Gobblers available to the Player. */
     std::vector<Gobbler*> m_hand;    /**< The Player's hand containing pointers to Gobblers. */

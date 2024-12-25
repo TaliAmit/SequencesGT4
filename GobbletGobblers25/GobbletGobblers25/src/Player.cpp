@@ -21,7 +21,7 @@ PlayerColor Player::getColor() const
 
 Gobbler* Player::getGobblerFromHand(size_t index) const
 {
-	if (index < NUM_OF_GOBBLERS)
+	if (index < GameConstants::GOBBLERS_PER_PLAYER)
 	{
 		return m_hand[index];
 	}
@@ -43,7 +43,7 @@ void Player::setColor(PlayerColor color)
 
 void Player::removeGobblerFromHand(size_t index)
 {
-	if (index < NUM_OF_GOBBLERS)
+	if (index < GameConstants::GOBBLERS_PER_PLAYER)
 	{
 		m_hand[index] = nullptr;
 	}
@@ -51,7 +51,7 @@ void Player::removeGobblerFromHand(size_t index)
 
 void Player::insertAllGobblersToHand()
 {
-	for (int i = 0; i < NUM_OF_GOBBLERS; ++i)
+	for (int i = 0; i < GameConstants::GOBBLERS_PER_PLAYER; ++i)
 	{
 		m_hand[i] = &m_gobblers[i];
 	}
@@ -60,7 +60,7 @@ void Player::insertAllGobblersToHand()
 
 void Player::initHand()
 {
-	for (int i = 0; i < NUM_OF_GOBBLERS; ++i)
+	for (int i = 0; i < GameConstants::GOBBLERS_PER_PLAYER; ++i)
 	{
 		m_hand.push_back(nullptr);
 	}
@@ -68,12 +68,17 @@ void Player::initHand()
 
 void Player::createGobblers()
 {
-	m_gobblers.push_back(Gobbler(m_color, SMALL));
-	m_gobblers.push_back(Gobbler(m_color, SMALL));
-	m_gobblers.push_back(Gobbler(m_color, MEDIUM));
-	m_gobblers.push_back(Gobbler(m_color, MEDIUM));
-	m_gobblers.push_back(Gobbler(m_color, LARGE));
-	m_gobblers.push_back(Gobbler(m_color, LARGE));
+	createGobblers(LARGE, GameConstants::LARGE_GOBBLERS);
+	createGobblers(MEDIUM, GameConstants::MEDIUM_GOBBLERS);
+	createGobblers(SMALL, GameConstants::SMALL_GOBBLERS);
+}
+
+void Player::createGobblers(GobblerSize size, size_t numOfGobblers)
+{
+	for (size_t i = 0; i < numOfGobblers; ++i)
+	{
+		m_gobblers.push_back(Gobbler(m_color, size));
+	}
 }
 
 
