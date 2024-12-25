@@ -142,6 +142,7 @@
     <ClInclude Include="headers\Gobbler.h" />
     <ClInclude Include="headers\Player.h" />
     <ClInclude Include="headers\enums.h" />
+    <ClInclude Include="headers\Init.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
