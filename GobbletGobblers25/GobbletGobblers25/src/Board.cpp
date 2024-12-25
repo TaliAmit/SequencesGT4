@@ -15,6 +15,11 @@ Cell& Board::getCell(size_t row, size_t col)
     return m_cells[row][col];
 }
 
+const Cell& Board::getCell(size_t row, size_t col) const
+{
+    return m_cells[row][col];
+}
+
 void Board::validateIndices(size_t row, size_t col) const
 {
     assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
