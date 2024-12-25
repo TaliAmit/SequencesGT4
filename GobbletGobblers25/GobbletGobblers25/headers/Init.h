@@ -7,4 +7,5 @@ namespace GameConstants {
 	const int SMALL_GOBBLERS = 2;
 	const int BOARD_ROWS = 3;
 	const int BOARD_COLS = 3;
+	const int WINNING_STREAK = 3;
 }
