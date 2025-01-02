@@ -1,7 +1,7 @@
 #include "../headers/Init.h"
 #include "../headers/Player.h"
 
-Player::Player(const PlayerType type, const PlayerColor color)
+Player::Player(PlayerType type, PlayerColor color)
 	: m_type(type)
 	, m_color(color)
 {

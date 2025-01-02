@@ -169,7 +169,7 @@
     <ClInclude Include="headers\Board.h" />
     <ClInclude Include="headers\ResourcesManager.h" />
     <ClInclude Include="headers\Rules.h" />
-    <ClInclude Include="headers\enums.h" />
+    <ClInclude Include="headers\Enums.h" />
     <ClInclude Include="headers\Init.h" />
   </ItemGroup>
   <ItemGroup>

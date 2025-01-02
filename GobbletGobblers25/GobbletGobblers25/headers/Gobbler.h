@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../headers/enums.h"
+#include "Enums.h"
 
 class Gobbler
 {
