@@ -1,8 +1,8 @@
 #pragma once
 
 #include <vector>
-#include "../headers/Gobbler.h"
-#include "../headers/enums.h"
+#include "Gobbler.h"
+#include "Enums.h"
 
 class Player
 {
@@ -12,13 +12,13 @@ public:
      * @param type The type of the Player (PlayerType type).
      * @param color The color of the Player (PlayerColor type).
      */
-    explicit Player(const PlayerType type, const PlayerColor color);
+    explicit Player(PlayerType type, PlayerColor color);
 
     /**
      * @brief Deleted copy constructor.
      * The Player object cannot be copied, ensuring no unexpected copies are made.
      */
-    Player(const Player&) = delete;
+    Player(const Player&) = default; // std::vector.push_back
 
     /**
      * @brief Default destructor.
