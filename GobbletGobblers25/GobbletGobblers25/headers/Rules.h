@@ -6,7 +6,7 @@
 #include "Cell.h"
 #include "Board.h"
 #include "Player.h"
-#include "enums.h"
+#include "Enums.h"
 
 class Rules {
 public:
