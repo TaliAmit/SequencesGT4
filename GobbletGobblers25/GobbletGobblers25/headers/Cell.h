@@ -7,7 +7,7 @@ class Cell
 {
 public:
 	explicit Cell();
-	Cell(const Cell&) = delete;
+	Cell(const Cell&) = default;
 	Cell& operator=(const Cell&) = default;
 	Cell& operator=(Cell&&) = delete;
 	~Cell() = default;
