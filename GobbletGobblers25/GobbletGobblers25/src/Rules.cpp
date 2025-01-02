@@ -4,19 +4,32 @@
 
 #include <cassert>
 
-Rules::Rules()
+Rules::Rules(const Board& board)
+: m_board{ board }
 {
 }
 
-bool Rules::canPlaceGobblerInCell(const Gobbler* gobbler, const Cell& cell) const
+bool Rules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t row, size_t col) const
 {
     assert(gobbler != nullptr);
+    
+    const Cell& cell = m_board.getCell(row, col);
     if (cell.isEmpty())
     {
         return true;
     }
     const Gobbler* existingGobbler = cell.getTopGobbler();
     return gobbler->getSize() > existingGobbler->getSize();
+}
+
+bool Rules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t fromRow, size_t fromCol, size_t toRow, size_t toCol) const
+{
+    if (fromRow == toRow && fromCol == toCol)
+    {
+        return false;
+    }
+
+    return canPlaceGobblerInCell(gobbler, toRow, toCol);
 }
 
 
@@ -27,9 +40,9 @@ bool Rules::canPlayerTakeGobbler(const Player& player, const Gobbler* gobbler) c
 }
 
 
-bool Rules::isWinner(const Board& board) const
+std::optional<PlayerColor> Rules::checkWinner(size_t row, size_t col) const
 {
-
+    return;
 }
 
 
@@ -105,5 +118,5 @@ bool Rules::hasColWinner(const Board& board, size_t col)
 
 bool Rules::hasDiagonalWinner(const Board& board)
 {
-
+    return true;
 }
