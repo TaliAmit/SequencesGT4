@@ -40,9 +40,9 @@ bool Rules::canPlayerTakeGobbler(const Player& player, const Gobbler* gobbler) c
 }
 
 
-std::optional<PlayerColor> Rules::checkWinner(size_t row, size_t col) const
+PlayerColor Rules::checkWinner(size_t row, size_t col) const
 {
-    return;
+    return NONE;
 }
 
 

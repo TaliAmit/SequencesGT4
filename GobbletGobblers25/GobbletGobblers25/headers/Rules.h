@@ -1,7 +1,5 @@
 #pragma once
 
-#include <optional>
-
 #include "Gobbler.h"
 #include "Cell.h"
 #include "Board.h"
@@ -52,7 +50,7 @@ public:
      * @param col The column index of the last move.
      * @return An optional containing the color of the winner, or std::nullopt if there is no winner.
      */
-    std::optional<PlayerColor> checkWinner(size_t row, size_t col) const;
+    PlayerColor checkWinner(size_t row, size_t col) const;
 
 private:
     const Board& m_board;
