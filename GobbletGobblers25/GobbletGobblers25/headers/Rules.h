@@ -44,39 +44,47 @@ public:
     bool canPlayerTakeGobbler(const Player& player, const Gobbler* gobbler) const;
 
     /**
-     * @brief Checks if there is a winner based on the current state of the board.
-     * @param board A reference to the Board object representing the current game state.
+     * @brief Checks if there is a winner based on the last move made on the board.
      * @param row The row index of the last move.
      * @param col The column index of the last move.
-     * @return An optional containing the color of the winner, or std::nullopt if there is no winner.
+     * @return The color of the winner, or NONE if there is no winner.
      */
     PlayerColor checkWinner(size_t row, size_t col) const;
 
+    /**
+     * @brief Checks if there is a winner in the row of the last move.
+     * @param row The row index of the last move.
+     * @param col The column index of the last move.
+     * @return The color of the winner, or NONE if there is no winner in the row.
+     */
+    PlayerColor checkRowWinner(size_t row, size_t col) const;
+
+    /**
+     * @brief Checks if there is a winner in the column of the last move.
+     * @param row The row index of the last move.
+     * @param col The column index of the last move.
+     * @return The color of the winner, or NONE if there is no winner in the column.
+     */
+    PlayerColor checkColWinner(size_t row, size_t col) const;
+
+    /**
+     * @brief Checks if there is a winner in the main diagonal (top-left to bottom-right) if the last move is on this diagonal.
+     * @param row The row index of the last move.
+     * @param col The column index of the last move.
+     * @return The color of the winner, or NONE if there is no winner in the main diagonal.
+     */
+    PlayerColor checkMainDiagonalWinner(size_t row, size_t col) const;
+
+    /**
+     * @brief Checks if there is a winner in the anti-diagonal (top-right to bottom-left) if the last move is on this diagonal.
+     * @param row The row index of the last move.
+     * @param col The column index of the last move.
+     * @return The color of the winner, or NONE if there is no winner in the anti-diagonal.
+     */
+    PlayerColor checkAntiDiagonalWinner(size_t row, size_t col) const;
+
+
 private:
     const Board& m_board;
-
-
-    /**
-     * @brief Checks if a specific row has a winner.
-     * @param board The game board.
-     * @param row The row index to check.
-     * @return true if the row has a winner, false otherwise.
-     */
-    bool hasRowWinner(const Board& board, size_t row);
-
-    /**
-     * @brief Checks if a specific column has a winner.
-     * @param board The game board.
-     * @param col The column index to check.
-     * @return true if the column has a winner, false otherwise.
-     */
-    bool hasColWinner(const Board& board, size_t col);
-
-    /**
-     * @brief Checks if either diagonal has a winner.
-     * @param board The game board.
-     * @return true if either diagonal has a winner, false otherwise.
-     */
-    bool hasDiagonalWinner(const Board& board);
 };
 

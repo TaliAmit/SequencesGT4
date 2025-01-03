@@ -42,81 +42,244 @@ bool Rules::canPlayerTakeGobbler(const Player& player, const Gobbler* gobbler) c
 
 PlayerColor Rules::checkWinner(size_t row, size_t col) const
 {
-    return NONE;
+    PlayerColor winner = checkRowWinner(row, col);
+    if (winner != NONE)
+    {
+        return winner;
+    }
+
+    winner = checkColWinner(row, col);
+    if (winner != NONE)
+    {
+        return winner;
+    }
+
+    winner = checkMainDiagonalWinner(row, col);
+    if (winner != NONE)
+    {
+        return winner;
+    }
+
+    winner = checkAntiDiagonalWinner(row, col);
+    return winner;
 }
 
-
-bool Rules::hasRowWinner(const Board& board, size_t row)
+PlayerColor Rules::checkRowWinner(size_t row, size_t col) const
 {
-    size_t count = 0;
-    Gobbler* previousGobbler = nullptr;
+    size_t count = 1;
+    Gobbler* currentGobbler = m_board.getCell(row, col).getTopGobbler();
 
-    for (size_t col = 0; col < GameConstants::BOARD_COLS; ++col)
+    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+
+    if (currentGobbler == nullptr)
     {
-        Gobbler* currentGobbler = board.getCell(row, col).getTopGobbler();
+        return NONE;
+    }
 
-        if (currentGobbler != nullptr) {
-            if (currentGobbler == previousGobbler)
+    PlayerColor possibleWinnerColor = currentGobbler->getColor();
+
+    for (size_t checkCol = col + 1; checkCol < GameConstants::BOARD_COLS; ++checkCol)
+    {
+        currentGobbler = m_board.getCell(row, checkCol).getTopGobbler();
+
+        if (currentGobbler != nullptr && currentGobbler->getColor() == possibleWinnerColor)
+        {
+            count++;
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    if (col > 0)
+    {
+        for (size_t checkCol = col; checkCol > 0; --checkCol)
+        {
+            currentGobbler = m_board.getCell(row, checkCol - 1).getTopGobbler();
+
+            if (currentGobbler != nullptr && currentGobbler->getColor() == possibleWinnerColor)
             {
                 count++;
             }
             else
             {
-                count = 1;
-                previousGobbler = currentGobbler;
+                break;
             }
+        }
+    }
+
+    if (count >= GameConstants::WINNING_STREAK)
+    {
+        return possibleWinnerColor;
+    }
+    else
+    {
+        return NONE;
+    }
+}
+
+PlayerColor Rules::checkColWinner(size_t row, size_t col) const
+{
+    size_t count = 1;
+    Gobbler* currentGobbler = m_board.getCell(row, col).getTopGobbler();
+
+    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+
+    if (currentGobbler == nullptr)
+    {
+        return NONE;
+    }
+
+    PlayerColor possibleWinnerColor = currentGobbler->getColor();
+
+    for (size_t checkRow = row + 1; checkRow < GameConstants::BOARD_ROWS; ++checkRow)
+    {
+        currentGobbler = m_board.getCell(checkRow, col).getTopGobbler();
+
+        if (currentGobbler != nullptr && currentGobbler->getColor() == possibleWinnerColor)
+        {
+            count++;
         }
         else
         {
-            count = 0;
-            previousGobbler = nullptr;
-        }
-
-        if (count >= GameConstants::WINNING_STREAK)
-        {
-            return true;
+            break;
         }
     }
-    return false;
-}
 
-
-bool Rules::hasColWinner(const Board& board, size_t col)
-{
-    size_t count = 0;
-    Gobbler* previousGobbler = nullptr;
-
-    for (size_t row = 0; row < GameConstants::BOARD_ROWS; ++row)
+    if (row > 0)
     {
-        Gobbler* currentGobbler = board.getCell(row, col).getTopGobbler();
+        for (size_t checkRow = row; checkRow > 0; --checkRow)
+        {
+            currentGobbler = m_board.getCell(checkRow - 1, col).getTopGobbler();
 
-        if (currentGobbler != nullptr) {
-            if (currentGobbler == previousGobbler)
+            if (currentGobbler != nullptr && currentGobbler->getColor() == possibleWinnerColor)
             {
                 count++;
             }
             else
             {
-                count = 1;
-                previousGobbler = currentGobbler;
+                break;
             }
+        }
+    }
+
+    if (count >= GameConstants::WINNING_STREAK)
+    {
+        return possibleWinnerColor;
+    }
+    else
+    {
+        return NONE;
+    }
+}
+
+PlayerColor Rules::checkMainDiagonalWinner(size_t row, size_t col) const
+{
+    size_t count = 1;
+    Gobbler* currentGobbler = m_board.getCell(row, col).getTopGobbler();
+
+    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+
+    if (currentGobbler == nullptr)
+    {
+        return NONE;
+    }
+
+    PlayerColor possibleWinnerColor = currentGobbler->getColor();
+
+    for (size_t i = 1; row + i < GameConstants::BOARD_ROWS && col + i < GameConstants::BOARD_COLS; ++i)
+    {
+        currentGobbler = m_board.getCell(row + i, col + i).getTopGobbler();
+
+        if (currentGobbler != nullptr && currentGobbler->getColor() == possibleWinnerColor)
+        {
+            count++;
         }
         else
         {
-            count = 0;
-            previousGobbler = nullptr;
-        }
-
-        if (count >= GameConstants::WINNING_STREAK)
-        {
-            return true;
+            break;
         }
     }
-    return false;
+
+    if (row > 0 && col > 0)
+    {
+        for (size_t i = 0; row - i > 0 && col - i > 0; --i)
+        {
+            currentGobbler = m_board.getCell(row - i - 1, col - i - 1).getTopGobbler();
+
+            if (currentGobbler != nullptr && currentGobbler->getColor() == possibleWinnerColor)
+            {
+                count++;
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+
+    if (count >= GameConstants::WINNING_STREAK)
+    {
+        return possibleWinnerColor;
+    }
+    else
+    {
+        return NONE;
+    }
 }
 
-
-bool Rules::hasDiagonalWinner(const Board& board)
+PlayerColor Rules::checkAntiDiagonalWinner(size_t row, size_t col) const
 {
-    return true;
+    size_t count = 1;
+    Gobbler* currentGobbler = m_board.getCell(row, col).getTopGobbler();
+
+    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+
+    if (currentGobbler == nullptr)
+    {
+        return NONE;
+    }
+
+    PlayerColor possibleWinnerColor = currentGobbler->getColor();
+
+    for (size_t i = 1; row - i + 1 > 0 && col + i < GameConstants::BOARD_COLS; ++i)
+    {
+        currentGobbler = m_board.getCell(row - i, col + i).getTopGobbler();
+
+        if (currentGobbler != nullptr && currentGobbler->getColor() == possibleWinnerColor)
+        {
+            count++;
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    if (row > 0 && col > 0)
+    {
+        for (size_t i = 1; row + i < GameConstants::BOARD_ROWS && col - i + 1 > 0; --i)
+        {
+            currentGobbler = m_board.getCell(row + i, col - i).getTopGobbler();
+
+            if (currentGobbler != nullptr && currentGobbler->getColor() == possibleWinnerColor)
+            {
+                count++;
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+
+    if (count >= GameConstants::WINNING_STREAK)
+    {
+        return possibleWinnerColor;
+    }
+    else
+    {
+        return NONE;
+    }
 }
