@@ -5,7 +5,7 @@
 #include "Player.h"
 #include "ResourcesManager.h"
 //#include "UIManager.h"  
-
+/*
 class Game
 {
 public:
@@ -30,7 +30,7 @@ private:
 private:
     Board m_board;
     std::vector<Player> m_players;
-
+    size_t m_numOfPlayers;
     bool m_isRunning;
     size_t m_currentPlayerIdx;
     bool m_isGoblerTakenFromHand;
@@ -39,3 +39,4 @@ private:
     //ResourcesManager m_resourceManager;
     // UIManager& m_uiManager;
 };
+*/

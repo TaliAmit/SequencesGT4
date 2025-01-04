@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\BoardState.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\Gobbler.cpp" />

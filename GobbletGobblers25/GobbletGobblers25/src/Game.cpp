@@ -1,3 +1,5 @@
+
+/*
 #include <iostream>
 #include <SDL.h>
 #include <SDL_image.h>
@@ -5,9 +7,9 @@
 #include "../headers/Game.h"
 #include "../headers/Rules.h"
 
-Game::Game()
+Game::Game() 
     : m_players()
-    , m_board()
+    , m_board(3, 3)
     , m_isRunning(false) // true?
     , m_currentPlayerIdx(0) // ?
     , m_rules(std::make_unique<Rules>()) // after Haim uploads Rules class
@@ -16,6 +18,7 @@ Game::Game()
 {
     initPlayers();
 }
+
 
 void Game::handleEvents(SDL_Event& e)
 {
@@ -72,6 +75,8 @@ void Game::initPlayers()
 	m_players.push_back(Player(HUMAN, ORANGE));
 	m_players.push_back(Player(HUMAN, GREEN));
 }
+*/
+
 
 
 /*

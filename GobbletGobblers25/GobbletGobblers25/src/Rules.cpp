@@ -14,7 +14,7 @@ bool Rules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t row, size_t col
     assert(gobbler != nullptr);
     
     const Cell& cell = m_board.getCell(row, col);
-    if (cell.isEmpty())
+    if (cell.isEmpty()) 
     {
         return true;
     }
@@ -39,8 +39,8 @@ bool Rules::canPlayerTakeGobbler(const Player& player, const Gobbler* gobbler) c
     return player.getColor() == gobbler->getColor();
 }
 
-
-PlayerColor Rules::checkWinner(size_t row, size_t col) const
+// should change to player identifier
+PlayerColor Rules::checkWinner(size_t row, size_t col) const 
 {
     PlayerColor winner = checkRowWinner(row, col);
     if (winner != NONE)
@@ -64,12 +64,14 @@ PlayerColor Rules::checkWinner(size_t row, size_t col) const
     return winner;
 }
 
+
+
 PlayerColor Rules::checkRowWinner(size_t row, size_t col) const
 {
     size_t count = 1;
     Gobbler* currentGobbler = m_board.getCell(row, col).getTopGobbler();
 
-    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+    assert(row < m_board.getRows() && col < m_board.getCols());
 
     if (currentGobbler == nullptr)
     {
@@ -78,7 +80,7 @@ PlayerColor Rules::checkRowWinner(size_t row, size_t col) const
 
     PlayerColor possibleWinnerColor = currentGobbler->getColor();
 
-    for (size_t checkCol = col + 1; checkCol < GameConstants::BOARD_COLS; ++checkCol)
+    for (size_t checkCol = col + 1; checkCol < m_board.getCols(); ++checkCol)
     {
         currentGobbler = m_board.getCell(row, checkCol).getTopGobbler();
 
@@ -119,12 +121,13 @@ PlayerColor Rules::checkRowWinner(size_t row, size_t col) const
     }
 }
 
+
 PlayerColor Rules::checkColWinner(size_t row, size_t col) const
 {
     size_t count = 1;
     Gobbler* currentGobbler = m_board.getCell(row, col).getTopGobbler();
 
-    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+    assert(row < m_board.getRows() && col < m_board.getCols());
 
     if (currentGobbler == nullptr)
     {
@@ -133,7 +136,7 @@ PlayerColor Rules::checkColWinner(size_t row, size_t col) const
 
     PlayerColor possibleWinnerColor = currentGobbler->getColor();
 
-    for (size_t checkRow = row + 1; checkRow < GameConstants::BOARD_ROWS; ++checkRow)
+    for (size_t checkRow = row + 1; checkRow < m_board.getRows(); ++checkRow)
     {
         currentGobbler = m_board.getCell(checkRow, col).getTopGobbler();
 
@@ -179,7 +182,7 @@ PlayerColor Rules::checkMainDiagonalWinner(size_t row, size_t col) const
     size_t count = 1;
     Gobbler* currentGobbler = m_board.getCell(row, col).getTopGobbler();
 
-    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+    assert(row < m_board.getRows() && col < m_board.getCols());
 
     if (currentGobbler == nullptr)
     {
@@ -188,7 +191,7 @@ PlayerColor Rules::checkMainDiagonalWinner(size_t row, size_t col) const
 
     PlayerColor possibleWinnerColor = currentGobbler->getColor();
 
-    for (size_t i = 1; row + i < GameConstants::BOARD_ROWS && col + i < GameConstants::BOARD_COLS; ++i)
+    for (size_t i = 1; row + i < m_board.getRows() && col + i < m_board.getCols(); ++i)
     {
         currentGobbler = m_board.getCell(row + i, col + i).getTopGobbler();
 
@@ -234,7 +237,7 @@ PlayerColor Rules::checkAntiDiagonalWinner(size_t row, size_t col) const
     size_t count = 1;
     Gobbler* currentGobbler = m_board.getCell(row, col).getTopGobbler();
 
-    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+    assert(row < m_board.getRows() && col < m_board.getCols());
 
     if (currentGobbler == nullptr)
     {
@@ -243,7 +246,7 @@ PlayerColor Rules::checkAntiDiagonalWinner(size_t row, size_t col) const
 
     PlayerColor possibleWinnerColor = currentGobbler->getColor();
 
-    for (size_t i = 1; row - i + 1 > 0 && col + i < GameConstants::BOARD_COLS; ++i)
+    for (size_t i = 1; row - i + 1 > 0 && col + i < m_board.getCols(); ++i)
     {
         currentGobbler = m_board.getCell(row - i, col + i).getTopGobbler();
 
@@ -259,7 +262,7 @@ PlayerColor Rules::checkAntiDiagonalWinner(size_t row, size_t col) const
 
     if (row > 0 && col > 0)
     {
-        for (size_t i = 1; row + i < GameConstants::BOARD_ROWS && col - i + 1 > 0; --i)
+        for (size_t i = 1; row + i < m_board.getRows() && col - i + 1 > 0; --i)
         {
             currentGobbler = m_board.getCell(row + i, col - i).getTopGobbler();
 

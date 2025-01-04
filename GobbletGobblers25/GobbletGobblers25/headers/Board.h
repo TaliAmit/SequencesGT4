@@ -6,7 +6,7 @@
 class Board
 {
 public:
-	explicit Board();
+	explicit Board(size_t row, size_t col);
 
 	Board(const Board&) = delete;
 	Board& operator=(const Board&) = delete;
@@ -45,8 +45,14 @@ public:
 	 */
 	const Cell& getCell(size_t row, size_t col) const;
 
+	size_t getRows() const;
+	size_t getCols() const;
+
 
 private:
+	size_t m_rows;
+	size_t m_cols;
+
 	void validateIndices(size_t row, size_t col) const;
 	std::vector<std::vector<Cell>> m_cells;
 };
