@@ -33,6 +33,24 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Exclude executable files
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.o
+*.a
+*.app
+*.out
+*.log
+
+# Exceptions for SDL libraries
+!lib/SDL2.dll
+!lib/SDL2_image.dll
+!lib/SDL2.lib
+
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
