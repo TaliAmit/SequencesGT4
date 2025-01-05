@@ -19,9 +19,9 @@ private:
     // void handleMouseEvent(const SDL_Event& event); // handle mouse events
     void update(); // game status update
     //void render(); // display game graphics
-    // void reset(); 
+    // void reset();
 
-   
+
     // bool handlePlayerAction(Player& player, const SDL_Point& mousePosition); // handle mouse action
     void switchTurn();
 

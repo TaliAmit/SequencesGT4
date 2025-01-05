@@ -1,5 +1,5 @@
-#include "../headers/Init.h"
-#include "../headers/Player.h"
+#include "Init.h"
+#include "Player.h"
 
 Player::Player(PlayerType type, PlayerColor color)
 	: m_type(type)

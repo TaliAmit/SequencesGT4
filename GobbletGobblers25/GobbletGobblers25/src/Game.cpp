@@ -3,9 +3,9 @@
 #include <iostream>
 #include <SDL.h>
 #include <SDL_image.h>
-#include "../headers/ResourcesManager.h"
-#include "../headers/Game.h"
-#include "../headers/Rules.h"
+#include "ResourcesManager.h"
+#include "Game.h"
+#include "Rules.h"
 
 Game::Game() 
     : m_players()
@@ -49,11 +49,11 @@ void Game::handleEvents(SDL_Event& e)
 
 void Game::run()
 {
-	while (m_isRunning)
-	{
-        
+    while (m_isRunning)
+    {
 
-	}
+
+    }
 }
 
 void Game::update()
@@ -65,15 +65,15 @@ void Game::update()
 
 void Game::switchTurn()
 {
-	m_currentPlayerIdx = (m_currentPlayerIdx + 1) % m_players.size();
+    m_currentPlayerIdx = (m_currentPlayerIdx + 1) % m_players.size();
 }
 
 
 void Game::initPlayers()
 {
-	// It will be a UiManager function :
-	m_players.push_back(Player(HUMAN, ORANGE));
-	m_players.push_back(Player(HUMAN, GREEN));
+    // It will be a UiManager function :
+    m_players.push_back(Player(HUMAN, ORANGE));
+    m_players.push_back(Player(HUMAN, GREEN));
 }
 */
 
@@ -94,7 +94,7 @@ void run()
         // Prompt the player to select a game
         int gameChoice = showMenu();
         switchToGame(gameChoice);
-        
+
 }
 
 void switchToGame(Games gameChoice)

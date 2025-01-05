@@ -9,7 +9,7 @@ namespace GameConstants
 	const size_t MAX_COLS = 3;
 
 	// This 2 constants are true while BOT considared as a player
-	const size_t MIN_PLAYERS = 2; 
+	const size_t MIN_PLAYERS = 2;
 	const size_t MAX_PLAYERS = 5;
 
 	const size_t PLAYERS = 2;

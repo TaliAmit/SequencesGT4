@@ -1,5 +1,5 @@
-#include "../headers/Board.h"
-#include "../headers/Init.h"
+#include "Board.h"
+#include "Init.h"
 
 #include <cassert>
 

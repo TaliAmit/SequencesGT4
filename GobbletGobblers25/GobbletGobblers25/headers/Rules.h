@@ -86,5 +86,7 @@ public:
 
 private:
     const Board& m_board;
+    const size_t m_rows;
+    const size_t m_cols;
 };
 

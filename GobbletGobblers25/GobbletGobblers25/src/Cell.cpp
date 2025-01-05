@@ -1,4 +1,4 @@
-#include "../headers/Cell.h"
+#include "Cell.h"
 #include <cassert>
 
 Cell::Cell()
