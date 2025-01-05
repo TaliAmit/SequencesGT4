@@ -22,7 +22,7 @@ void printCurrentWorkingDirectory() {
     }
 }
 
-int main(int argc, char* args[])
+int main(int argc, char* argv[])
 {
     SDL_Window* window = NULL;
     SDL_Renderer* renderer = NULL;
