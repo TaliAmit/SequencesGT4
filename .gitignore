@@ -45,10 +45,29 @@ bld/
 *.out
 *.log
 
+
+# Ignore Debug and Release directories
+**/Debug/
+**/Release/
+**/x64/
+**/x64Debug/
+
+
 # Exceptions for SDL libraries
-!lib/SDL2.dll
-!lib/SDL2_image.dll
-!lib/SDL2.lib
+!SDL/lib/
+!SDL/lib/x64/
+!SDL/lib/x64/SDL2.lib
+!SDL/lib/x64/SDL2main.lib
+!SDL/lib/x64/SDL2_image.lib
+!SDL/lib/x64/SDL2.dll
+!SDL/lib/x64/SDL2_image.dll
+
+# Exclude build directories
+/build/
+# Ignore lib directories except SDL lib
+lib/
+!lib/
+!SDL/lib/
 
 
 # Visual Studio 2015/2017 cache/options directory

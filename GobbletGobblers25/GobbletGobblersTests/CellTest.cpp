@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "gtest/gtest.h"
 #include "Cell.h"
 #include "Gobbler.h"
 #include "enums.h"
@@ -45,7 +45,7 @@ TEST(CellTest, RemoveTopGobbler) {
     EXPECT_TRUE(cell.isEmpty());
 }
 
-// Main function to run all tests
+//Main function to run all tests
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
