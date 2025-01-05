@@ -5,7 +5,7 @@
 #include "Player.h"
 #include "ResourcesManager.h"
 //#include "UIManager.h"  
-
+/*
 class Game
 {
 public:
@@ -19,9 +19,9 @@ private:
     // void handleMouseEvent(const SDL_Event& event); // handle mouse events
     void update(); // game status update
     //void render(); // display game graphics
-    // void reset(); 
+    // void reset();
 
-   
+
     // bool handlePlayerAction(Player& player, const SDL_Point& mousePosition); // handle mouse action
     void switchTurn();
 
@@ -30,7 +30,7 @@ private:
 private:
     Board m_board;
     std::vector<Player> m_players;
-
+    size_t m_numOfPlayers;
     bool m_isRunning;
     size_t m_currentPlayerIdx;
     bool m_isGoblerTakenFromHand;
@@ -39,3 +39,4 @@ private:
     //ResourcesManager m_resourceManager;
     // UIManager& m_uiManager;
 };
+*/
