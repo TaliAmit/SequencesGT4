@@ -1,11 +1,13 @@
-#include "../headers/Board.h"
-#include "../headers/Init.h"
+#include "Board.h"
+#include "Init.h"
 
 #include <cassert>
 
 
-Board::Board()
-: m_cells(GameConstants::BOARD_ROWS, std::vector<Cell>(GameConstants::BOARD_COLS))
+Board::Board(size_t row, size_t col)
+    : m_rows(row)
+    , m_cols(col)
+    , m_cells(row, std::vector<Cell>(col))
 {
 }
 
@@ -20,7 +22,17 @@ const Cell& Board::getCell(size_t row, size_t col) const
     return m_cells[row][col];
 }
 
+size_t Board::getRows() const
+{
+    return m_rows;
+}
+
+size_t Board::getCols() const
+{
+    return m_cols;
+}
+
 void Board::validateIndices(size_t row, size_t col) const
 {
-    assert(row < GameConstants::BOARD_ROWS && col < GameConstants::BOARD_COLS);
+    assert(row < m_rows && col < m_cols);
 }
