@@ -198,7 +198,7 @@
     <ClInclude Include="Headers\Init.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\PNG_transparency_demonstration_1.png" />
+    <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
