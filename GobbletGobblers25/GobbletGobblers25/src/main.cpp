@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
 
     printCurrentWorkingDirectory();
 
-    SDL_Surface* loadedSurface = IMG_Load("Resources/PNG_transparency_demonstration_1.png");
+    SDL_Surface* loadedSurface = IMG_Load("Resources/Pictures/PNG_transparency_demonstration_1.png");
     if (loadedSurface == NULL)
     {
         std::cout << "Unable to load image! SDL_image Error: " << IMG_GetError() << std::endl;
