@@ -139,9 +139,11 @@
     <ClCompile Include="..\GobbletGobblers25\src\Player.cpp" />
     <ClCompile Include="..\GobbletGobblers25\src\ResourcesManager.cpp" />
     <ClCompile Include="..\GobbletGobblers25\src\Rules.cpp" />
+    <ClCompile Include="BoardTests.cpp" />
     <ClCompile Include="CellTests.cpp" />
     <ClCompile Include="GobblerTests.cpp" />
-    <ClCompile Include="PlayerTest.cpp" />
+    <ClCompile Include="PlayerTests.cpp" />
+    <ClCompile Include="RulesTests.cpp" />
     <ClCompile Include="UnitTesting.cpp" />
   </ItemGroup>
   <ItemGroup>
