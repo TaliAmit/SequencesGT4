@@ -201,7 +201,7 @@ PlayerColor Rules::checkMainDiagonalWinner(size_t row, size_t col) const
         }
     }
 
-    for (size_t i = 0; row - i > 0 && col - i > 0; --i)
+    for (size_t i = 0; row - i > 0 && col - i > 0; ++i)
     {
         currentGobbler = m_board.getCell(row - i - 1, col - i - 1).getTopGobbler();
 
