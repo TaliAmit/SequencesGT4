@@ -79,5 +79,47 @@
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerRed_S.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\JPEG_GobbletGobblersBoard.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerBlue_L.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerBlue_M.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerBlue_S.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerGreen_L.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerGreen_M.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerGreen_S.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerOrange_L.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerOrange_M.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerOrange_S.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerRed_L.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobblerRed_M.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobbletGobblersBoard.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

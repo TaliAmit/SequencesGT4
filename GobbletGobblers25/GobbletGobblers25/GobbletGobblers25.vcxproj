@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -198,6 +198,20 @@
     <ClInclude Include="Headers\Init.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resources\Pictures\JPEG_GobbletGobblersBoard.jpeg" />
+    <Image Include="Resources\Pictures\PNG_GobblerBlue_L.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerBlue_M.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerBlue_S.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerGreen_L.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerGreen_M.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerGreen_S.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerOrange_L.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerOrange_M.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerOrange_S.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerRed_L.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerRed_M.png" />
+    <Image Include="Resources\Pictures\PNG_GobblerRed_S.png" />
+    <Image Include="Resources\Pictures\PNG_GobbletGobblersBoard.png" />
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
