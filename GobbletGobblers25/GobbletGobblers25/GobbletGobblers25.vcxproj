@@ -214,6 +214,9 @@
     <Image Include="Resources\Pictures\PNG_GobbletGobblersBoard.png" />
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Details\ResourcesManager.inl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>

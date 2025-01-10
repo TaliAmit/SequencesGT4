@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../headers/BoardState.h"
+#include "BoardState.h"
+//#include "../headers/BoardState.h"
 //#include "../headers/Init.h"
 
 

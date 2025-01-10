@@ -81,17 +81,12 @@ public:
 	ResourcesManager& operator=(const ResourcesManager& a_other) = delete;
 	static ResourcesManager& instance();
 
-
-	SDL_Texture* texture(GobblerImage a_enum);
-	SDL_Texture* texture(BoardImage a_enum);
-	SDL_Texture* texture(ButtonImage a_enum);
-
 	//SDL_Texture* texture(FourInARowPlayerImage a_enum);
 	//SDL_Texture* texture(TicTacToePlayerImage a_enum);
 
-	// learn why there are no parameters in the braces?
-	template <typename T>
-	std::map<T, SDL_Texture*>& getTexturesMap();
+	template<typename T>
+	SDL_Texture* loadTexture(const T& a_enum);
+
 
 private:
 	explicit ResourcesManager(SDL_Renderer* renderer);
@@ -126,6 +121,10 @@ private:
 	void cleanupTextures(std::map<T, SDL_Texture*>& texturesMap);
 
 
-	template<typename T>
-	SDL_Texture* loadTexture(const T& a_enum);
+	// learn why there are no parameters in the braces?
+	template <typename T>
+	std::map<T, SDL_Texture*>& getTexturesMap();
 };
+
+#include "../Details/ResourcesManager.inl"
+
