@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -179,7 +179,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\Gobbler.cpp" />
-    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\GGPlayer.cpp" />
     <ClCompile Include="src\Cell.cpp" />
     <ClCompile Include="src\Board.cpp" />
     <ClCompile Include="src\ResourcesManager.cpp" />
@@ -188,7 +188,9 @@
   <ItemGroup>
     <ClInclude Include="Headers\BoardState.h" />
     <ClInclude Include="Headers\Game.h" />
+    <ClInclude Include="Headers\GGPlayer.h" />
     <ClInclude Include="Headers\Gobbler.h" />
+    <ClInclude Include="Headers\Piece.h" />
     <ClInclude Include="Headers\Player.h" />
     <ClInclude Include="Headers\Cell.h" />
     <ClInclude Include="Headers\Board.h" />
@@ -199,6 +201,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Headers\GGPlayer.inl" />
+    <None Include="Headers\Gobbler.inl" />
+    <None Include="Headers\Piece.inl" />
+    <None Include="Headers\Player.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

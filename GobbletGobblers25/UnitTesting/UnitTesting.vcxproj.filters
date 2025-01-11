@@ -33,9 +33,6 @@
     <ClCompile Include="..\GobbletGobblers25\src\Gobbler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\GobbletGobblers25\src\Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\GobbletGobblers25\src\ResourcesManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -55,6 +52,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RulesTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardStateTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GobbletGobblers25\src\GGPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GGPlayerTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PieceTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

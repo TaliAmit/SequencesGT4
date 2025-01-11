@@ -135,13 +135,16 @@
     <ClCompile Include="..\GobbletGobblers25\src\BoardState.cpp" />
     <ClCompile Include="..\GobbletGobblers25\src\Cell.cpp" />
     <ClCompile Include="..\GobbletGobblers25\src\Game.cpp" />
+    <ClCompile Include="..\GobbletGobblers25\src\GGPlayer.cpp" />
     <ClCompile Include="..\GobbletGobblers25\src\Gobbler.cpp" />
-    <ClCompile Include="..\GobbletGobblers25\src\Player.cpp" />
     <ClCompile Include="..\GobbletGobblers25\src\ResourcesManager.cpp" />
     <ClCompile Include="..\GobbletGobblers25\src\Rules.cpp" />
+    <ClCompile Include="BoardStateTests.cpp" />
     <ClCompile Include="BoardTests.cpp" />
     <ClCompile Include="CellTests.cpp" />
+    <ClCompile Include="GGPlayerTests.cpp" />
     <ClCompile Include="GobblerTests.cpp" />
+    <ClCompile Include="PieceTests.cpp" />
     <ClCompile Include="PlayerTests.cpp" />
     <ClCompile Include="RulesTests.cpp" />
     <ClCompile Include="UnitTesting.cpp" />

@@ -24,7 +24,7 @@
     <ClCompile Include="src\Gobbler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Player.cpp">
+    <ClCompile Include="src\GGPlayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Cell.cpp">
@@ -74,10 +74,30 @@
     <ClInclude Include="headers\BoardState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Piece.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\GGPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Headers\Piece.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Headers\Gobbler.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Headers\GGPlayer.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Headers\Player.inl">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
