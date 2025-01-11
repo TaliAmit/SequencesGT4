@@ -99,3 +99,26 @@ void BoardState::decAntiDiagonal(size_t row, size_t col)
 	}
 }
 
+size_t BoardState::getRowCounter(size_t row)
+{
+	return m_rows[row];
+}
+
+
+size_t BoardState::getColCounter(size_t col)
+{
+	return m_cols[col];
+}
+
+
+size_t BoardState::getMainDiagonalCounter(size_t row, size_t col)
+{
+	size_t diagonalIdx = pointToMainDiagonalIdx(row, col);
+	return m_mainDiagonals[diagonalIdx];
+}
+
+size_t BoardState::getAntiDiagonalCounter(size_t row, size_t col)
+{
+	size_t diagonalIdx = pointToAntiDiagonalIdx(row, col);
+	return m_antiDiagonals[diagonalIdx];
+}

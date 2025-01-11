@@ -43,6 +43,11 @@ public:
     void decMainDiagonal(size_t row, size_t col);
     void decAntiDiagonal(size_t row, size_t col);
 
+    size_t getRowCounter(size_t row);
+    size_t getColCounter(size_t col);
+    size_t getMainDiagonalCounter(size_t row, size_t col);
+    size_t getAntiDiagonalCounter(size_t row, size_t col);
+
 private:
     /**
      * @brief Calculates the index of the main diagonal containing the given (row, col).
