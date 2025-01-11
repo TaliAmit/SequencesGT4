@@ -3,7 +3,7 @@
 #include "Board.h"
 #include "Cell.h"
 #include "Gobbler.h"
-#include "Player.h"
+#include "GGPlayer.h"
 #include "Enums.h"
 
 // Test canPlaceGobblerInCell (placing Gobbler in empty cell)
@@ -57,7 +57,7 @@ TEST_CASE("canPlaceGobblerInCell - Same Cell", "[Rules][Gobbler][place]") {
 TEST_CASE("canPlayerTakeGobbler", "[Rules][player][take][Gobbler]") {
     Board board(3, 3);
     Rules rules(board);
-    Player player(HUMAN, RED);
+    GGPlayer player(HUMAN, RED);
     Gobbler gobbler(RED, LARGE);
     REQUIRE(rules.canPlayerTakeGobbler(player, &gobbler));
 }
@@ -66,7 +66,7 @@ TEST_CASE("canPlayerTakeGobbler", "[Rules][player][take][Gobbler]") {
 TEST_CASE("canPlayerTakeGobbler - Wrong Color", "[Rules][player][take][Gobbler]") {
     Board board(3, 3);
     Rules rules(board);
-    Player player(HUMAN, RED);
+    GGPlayer player(HUMAN, RED);
     Gobbler gobbler(BLUE, LARGE);
     REQUIRE_FALSE(rules.canPlayerTakeGobbler(player, &gobbler));
 }

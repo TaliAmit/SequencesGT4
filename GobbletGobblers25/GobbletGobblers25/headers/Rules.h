@@ -3,7 +3,7 @@
 #include "Gobbler.h"
 #include "Cell.h"
 #include "Board.h"
-#include "Player.h"
+#include "GGPlayer.h"
 #include "Enums.h"
 
 class Rules {
@@ -41,7 +41,7 @@ public:
      * @param gobbler A pointer to the Gobbler that the player wants to take.
      * @return true if the player can take the Gobbler, false otherwise.
      */
-    bool canPlayerTakeGobbler(const Player& player, const Gobbler* gobbler) const;
+    bool canPlayerTakeGobbler(const GGPlayer& player, const Gobbler* gobbler) const;
 
     /**
      * @brief Checks if there is a winner based on the last move made on the board.
