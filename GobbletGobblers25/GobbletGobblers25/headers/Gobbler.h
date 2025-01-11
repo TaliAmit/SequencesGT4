@@ -1,8 +1,11 @@
 #pragma once
 
+#include "Piece.h"
 #include "Enums.h"
 
-class Gobbler
+
+
+class Gobbler: public Piece<PlayerColor>
 {
 public:
     /**
@@ -11,6 +14,10 @@ public:
      * @param gobblerSize The size of the Gobbler (GobblerSize type).
      */
     explicit Gobbler(PlayerColor gobblerColor, GobblerSize gobblerSize);
+    /*:Piece<PlayerColor>(gobblerColor)
+    , m_size(gobblerSize)
+    {
+    }*/
 
     /**
      * @brief Default copy constructor.
@@ -28,7 +35,7 @@ public:
      * @brief Gets the color of the Gobbler.
      * @return The current color of the Gobbler (PlayerColor type).
      */
-    PlayerColor getColor() const;
+    //PlayerColor getColor() const;
 
     /**
      * @brief Gets the size of the Gobbler.
@@ -40,7 +47,7 @@ public:
      * @brief Sets the color of the Gobbler.
      * @param gobblerColor The color to set for the Gobbler (PlayerColor type).
      */
-    void setColor(PlayerColor gobblerColor);
+    //void setColor(PlayerColor gobblerColor);
 
     /**
      * @brief Sets the size of the Gobbler.
@@ -50,6 +57,12 @@ public:
     void setSize(GobblerSize gobblerSize);
 
 private:
-    PlayerColor m_color; /**< The color of the Gobbler. */
+    //PlayerColor m_color; /**< The color of the Gobbler. */
     GobblerSize m_size;  /**< The size of the Gobbler. */
 };
+
+
+
+#include "Gobbler.inl"
+
+
