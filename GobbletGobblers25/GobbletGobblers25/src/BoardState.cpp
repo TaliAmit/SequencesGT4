@@ -7,14 +7,11 @@
 BoardState::BoardState(size_t numOfRows, size_t numOfCols)
 	: m_numOfRows(numOfRows)
 	, m_numOfCols(numOfCols)
+	, m_rows(numOfRows, 0)
+	, m_cols(numOfCols, 0)
+	, m_mainDiagonals(numOfRows + numOfCols + 1, 0)
+	, m_antiDiagonals(numOfRows + numOfCols + 1, 0)
 {
-	m_rows.resize(numOfRows, 0);
-	m_cols.resize(numOfCols, 0);
-
-	size_t numOfDiagonals = numOfRows + numOfCols + 1;
-
-	m_mainDiagonals.resize(numOfDiagonals, 0);
-	m_antiDiagonals.resize(numOfDiagonals, 0);
 }
 
 size_t BoardState::pointToMainDiagonalIdx(size_t row, size_t col)
