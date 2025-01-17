@@ -36,13 +36,16 @@
     <ClCompile Include="src\Board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ResourcesManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Rules.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\BoardState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GG_ResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,9 +68,6 @@
     <ClInclude Include="headers\Board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\ResourcesManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="headers\Rules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -77,15 +77,18 @@
     <ClInclude Include="headers\BoardState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="headers\GG_ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Pictures\PNG_GobblerRed_S.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\JPEG_GobbletGobblersBoard.jpeg">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Pictures\PNG_GobblerBlue_L.png">
@@ -124,9 +127,18 @@
     <Image Include="Resources\Pictures\PNG_GobbletGobblersBoard.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Pictures\PNG_ExitButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_GobbletGobblersScreen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Pictures\PNG_NewGameButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Details\ResourcesManager.inl">
+    <None Include="Details\ResourceManager.inl">
       <Filter>Details</Filter>
     </None>
   </ItemGroup>

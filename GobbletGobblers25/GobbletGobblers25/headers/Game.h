@@ -3,7 +3,6 @@
 #include "Board.h"
 #include "Rules.h"
 #include "Player.h"
-#include "ResourcesManager.h"
 //#include "UIManager.h"  
 /*
 class Game
