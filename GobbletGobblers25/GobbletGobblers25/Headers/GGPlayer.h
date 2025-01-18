@@ -77,4 +77,5 @@ private:
     std::vector<Gobbler*> m_hand;    /**< The Player's hand containing pointers to Gobblers. */
 };
 
-#include "GGPlayer.inl"
+
+#include "../Details/GGPlayer.inl"

@@ -23,4 +23,4 @@ private:
     T m_identifier;
 };
 
-#include "Piece.inl"
+#include "../Details/Piece.inl"

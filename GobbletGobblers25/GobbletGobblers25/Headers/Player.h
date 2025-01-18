@@ -40,4 +40,4 @@ private:
     T m_playerIdentifier;    /**< The identifier of the Player (T type). */
 };
 
-#include "Player.inl"
+#include "../Details/Player.inl"
