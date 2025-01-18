@@ -66,21 +66,22 @@ void ResourceManager::removeTexturesFromData(std::map<T, PictureData>& picturesD
 //
 //// I need to learn 1. this <> and 2. the decleration with no parameters in the braces
 //template <>
-//std::map<GobblerImage, SDL_Texture*>& GG_ResourceManager::getTexturesMap<GobblerImage>()
+//std::map<GobblerImage, SDL_Texture*>& 
+// ::getTexturesMap<GobblerImage>()
 //{
 //	return m_gobblersTextures;
 //}
 //
 //
 //template <>
-//std::map<BoardImage, SDL_Texture*>& GG_ResourceManager::getTexturesMap<BoardImage>()
+//std::map<BoardImage, SDL_Texture*>& GGResourceManager::getTexturesMap<BoardImage>()
 //{
 //	return m_boardsTextures;
 //}
 //
 //
 //template <>
-//std::map<ButtonImage, SDL_Texture*>& GG_ResourceManager::getTexturesMap<ButtonImage>()
+//std::map<ButtonImage, SDL_Texture*>& GGResourceManager::getTexturesMap<ButtonImage>()
 //{
 //	return m_buttonsTextures;
 //}

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GG_ResourceManager.h"
+#include "GGResourceManager.h"
 
 #include <SDL_image.h>
 #include <SDL.h>
@@ -11,18 +11,18 @@
 #include "ResourceManager.h"
 
 
-GG_ResourceManager::GG_ResourceManager(SDL_Renderer* renderer)
+GGResourceManager::GGResourceManager(SDL_Renderer* renderer)
     : ResourceManager(renderer)
 {
     loadResources(); 
 }
 
-GG_ResourceManager::~GG_ResourceManager()
+GGResourceManager::~GGResourceManager()
 {
 
 }
 
-void GG_ResourceManager::loadResources()
+void GGResourceManager::loadResources()
 {
     initializeGobblersRes();
     initializeBoardRes();
@@ -31,7 +31,7 @@ void GG_ResourceManager::loadResources()
 }
 
 
-void GG_ResourceManager::initGobblersPicsData()
+void GGResourceManager::initGobblersPicsData()
 {
     m_gobblersRes.emplace(RED_GOBBLER_SMALL, PictureData("pictures/PNG_GobblerRed_S.png"));
     m_gobblersRes.emplace(RED_GOBBLER_MEDIUM, PictureData("pictures/PNG_GobblerRed_M.png"));
@@ -50,25 +50,25 @@ void GG_ResourceManager::initGobblersPicsData()
     m_gobblersRes.emplace(ORANGE_GOBBLER_LARGE, PictureData("pictures/PNG_GobblerOrange_L.png"));
 }
 
-void GG_ResourceManager::initBoardsPicsData()
+void GGResourceManager::initBoardsPicsData()
 {
     m_boardsRes.emplace(GG_BOARD, PictureData("pictures/PNG_GobbletGobblersBoard.png"));
 }
 
-void GG_ResourceManager::initButtonsPicsData()
+void GGResourceManager::initButtonsPicsData()
 {
     m_buttonsRes.emplace(NEW_GAME, PictureData("pictures/PNG_NewGameButton.png"));
     m_buttonsRes.emplace(EXIT_GAME, PictureData("pictures/PNG_ExitButton.png"));
 }
 
 
-void GG_ResourceManager::initScreensPicsData()
+void GGResourceManager::initScreensPicsData()
 {
     m_screensRes.emplace(GG_GAME_SCREAN, PictureData("pictures/PNG_GobbletGobblersScreen.png"));
 }
 
 
-void GG_ResourceManager::unloadResources()
+void GGResourceManager::unloadResources()
 {
     removeTexturesFromData(m_gobblersRes);
     removeTexturesFromData(m_boardsRes);
@@ -85,7 +85,7 @@ void GG_ResourceManager::unloadResources()
 
 }
 
-SDL_Texture* GG_ResourceManager::getTexture(GobblerImage gobblerEnum)
+SDL_Texture* GGResourceManager::getTexture(GobblerImage gobblerEnum)
 {
     auto it = m_gobblersRes.find(gobblerEnum);
 
@@ -98,7 +98,7 @@ SDL_Texture* GG_ResourceManager::getTexture(GobblerImage gobblerEnum)
 }
 
 
-SDL_Texture* GG_ResourceManager::getTexture(ButtonImage buttonEnum)
+SDL_Texture* GGResourceManager::getTexture(ButtonImage buttonEnum)
 {
     auto it = m_buttonsRes.find(buttonEnum);
 
@@ -110,7 +110,7 @@ SDL_Texture* GG_ResourceManager::getTexture(ButtonImage buttonEnum)
     return nullptr;
 }
 
-SDL_Texture* GG_ResourceManager::getTexture(BoardImage boardEnum)
+SDL_Texture* GGResourceManager::getTexture(BoardImage boardEnum)
 {
     auto it = m_boardsRes.find(boardEnum);
 
@@ -122,7 +122,7 @@ SDL_Texture* GG_ResourceManager::getTexture(BoardImage boardEnum)
     return nullptr;
 }
 
-SDL_Texture* GG_ResourceManager::getTexture(ScreenImage screenEnum)
+SDL_Texture* GGResourceManager::getTexture(ScreenImage screenEnum)
 {
     auto it = m_screensRes.find(screenEnum);
 
@@ -134,7 +134,7 @@ SDL_Texture* GG_ResourceManager::getTexture(ScreenImage screenEnum)
     return nullptr;
 }
 
-void GG_ResourceManager::removeGobblersTextures()
+void GGResourceManager::removeGobblersTextures()
 {
     for (auto [key, picData] : m_gobblersRes)
     {
@@ -147,7 +147,7 @@ void GG_ResourceManager::removeGobblersTextures()
 }
 
 
-void GG_ResourceManager::removeBoardTextures()
+void GGResourceManager::removeBoardTextures()
 {
     for (auto [key, picData] : m_boardsRes)
     {
@@ -160,7 +160,7 @@ void GG_ResourceManager::removeBoardTextures()
 }
 
 
-void GG_ResourceManager::removeButtonsTextures()
+void GGResourceManager::removeButtonsTextures()
 {
     for (auto [key, picData] : m_buttonsRes)
     {
@@ -173,7 +173,7 @@ void GG_ResourceManager::removeButtonsTextures()
 }
 
 
-void GG_ResourceManager::removeScreensTextures()
+void GGResourceManager::removeScreensTextures()
 {
     for (auto [key, picData] : m_screensRes)
     {
@@ -186,7 +186,7 @@ void GG_ResourceManager::removeScreensTextures()
 }
 
 
-void GG_ResourceManager::initializeGobblersRes()
+void GGResourceManager::initializeGobblersRes()
 {
     initGobblersPicsData();
 
@@ -197,7 +197,7 @@ void GG_ResourceManager::initializeGobblersRes()
 }
 
 
-void GG_ResourceManager::initializeBoardRes()
+void GGResourceManager::initializeBoardRes()
 {
     initBoardsPicsData();
 
@@ -208,7 +208,7 @@ void GG_ResourceManager::initializeBoardRes()
 }
 
 
-void GG_ResourceManager::initializeButtonsRes()
+void GGResourceManager::initializeButtonsRes()
 {
     initButtonsPicsData();
 
@@ -219,7 +219,7 @@ void GG_ResourceManager::initializeButtonsRes()
 }
 
 
-void GG_ResourceManager::initializeScreensRes()
+void GGResourceManager::initializeScreensRes()
 {
     initScreensPicsData();
 

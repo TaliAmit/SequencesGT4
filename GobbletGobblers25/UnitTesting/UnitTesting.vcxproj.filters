@@ -33,9 +33,6 @@
     <ClCompile Include="..\GobbletGobblers25\src\Gobbler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\GobbletGobblers25\src\ResourcesManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\GobbletGobblers25\src\Rules.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
