@@ -176,50 +176,37 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\BoardState.cpp" />
-    <ClCompile Include="src\GG_ResourceManager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\Gobbler.cpp" />
-    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\GGPlayer.cpp" />
     <ClCompile Include="src\Cell.cpp" />
     <ClCompile Include="src\Board.cpp" />
-    <ClCompile Include="src\ResourceManager.cpp" />
+    <ClCompile Include="src\ResourcesManager.cpp" />
     <ClCompile Include="src\Rules.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\BoardState.h" />
     <ClInclude Include="Headers\Game.h" />
+    <ClInclude Include="Headers\GGPlayer.h" />
     <ClInclude Include="Headers\Gobbler.h" />
+    <ClInclude Include="Headers\Piece.h" />
     <ClInclude Include="Headers\Player.h" />
     <ClInclude Include="Headers\Cell.h" />
     <ClInclude Include="Headers\Board.h" />
-    <ClInclude Include="headers\GG_ResourceManager.h" />
-    <ClInclude Include="headers\ResourceManager.h" />
+    <ClInclude Include="Headers\ResourcesManager.h" />
     <ClInclude Include="Headers\Rules.h" />
     <ClInclude Include="Headers\Enums.h" />
     <ClInclude Include="Headers\Init.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\Pictures\PNG_ExitButton.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerBlue_L.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerBlue_M.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerBlue_S.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerGreen_L.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerGreen_M.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerGreen_S.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerOrange_L.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerOrange_M.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerOrange_S.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerRed_L.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerRed_M.png" />
-    <Image Include="Resources\Pictures\PNG_GobblerRed_S.png" />
-    <Image Include="Resources\Pictures\PNG_GobbletGobblersBoard.png" />
-    <Image Include="Resources\Pictures\PNG_GobbletGobblersScreen.png" />
-    <Image Include="Resources\Pictures\PNG_NewGameButton.png" />
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Details\ResourceManager.inl" />
+    <None Include="Headers\GGPlayer.inl" />
+    <None Include="Headers\Gobbler.inl" />
+    <None Include="Headers\Piece.inl" />
+    <None Include="Headers\Player.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

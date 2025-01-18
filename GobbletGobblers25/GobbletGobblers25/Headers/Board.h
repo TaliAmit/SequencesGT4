@@ -50,7 +50,18 @@ public:
 
 
 private:
+	/**
+	* @brief Gets the number of rows in the board.
+	*
+	* @return The number of rows.
+	*/
 	size_t m_rows;
+
+	/**
+	* @brief Gets the number of columns in the board.
+	*
+	* @return The number of columns.
+	*/
 	size_t m_cols;
 
 	void validateIndices(size_t row, size_t col) const;

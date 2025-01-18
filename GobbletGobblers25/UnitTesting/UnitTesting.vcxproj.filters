@@ -33,10 +33,13 @@
     <ClCompile Include="..\GobbletGobblers25\src\Gobbler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\GobbletGobblers25\src\Player.cpp">
+    <ClCompile Include="..\GobbletGobblers25\src\ResourcesManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\GobbletGobblers25\src\Rules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CellTests.cpp">
@@ -45,7 +48,22 @@
     <ClCompile Include="GobblerTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerTest.cpp">
+    <ClCompile Include="PlayerTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RulesTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardStateTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GobbletGobblers25\src\GGPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GGPlayerTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PieceTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

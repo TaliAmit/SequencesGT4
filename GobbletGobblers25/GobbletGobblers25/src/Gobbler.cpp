@@ -1,16 +1,16 @@
 #include "Gobbler.h"
 #include "Player.h"
 
-Gobbler::Gobbler(PlayerColor gobblerColor, GobblerSize gobblerSize)
-	: m_color(gobblerColor)
-	, m_size(gobblerSize)
-{
-}
+//Gobbler::Gobbler(PlayerColor gobblerColor, GobblerSize gobblerSize)
+//:Piece<PlayerColor>(gobblerColor)
+//,m_size(gobblerSize)
+//{
+//}
 
-PlayerColor Gobbler::getColor() const
-{
-	return m_color;
-}
+//PlayerColor Gobbler::getColor() const
+//{
+//	return m_color;
+//}
 
 GobblerSize Gobbler::getSize() const
 {
@@ -18,10 +18,10 @@ GobblerSize Gobbler::getSize() const
 }
 
 
-void Gobbler::setColor(PlayerColor gobblerColor)
-{
-	m_color = gobblerColor;
-}
+//void Gobbler::setColor(PlayerColor gobblerColor)
+//{
+//	m_color = gobblerColor;
+//}
 
 void Gobbler::setSize(GobblerSize gobblerSize)
 {

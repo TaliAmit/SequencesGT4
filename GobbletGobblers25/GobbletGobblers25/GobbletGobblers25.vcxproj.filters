@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Details">
-      <UniqueIdentifier>{44d3c17f-0dff-4497-b8c2-54bd99ce51fa}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -27,7 +24,7 @@
     <ClCompile Include="src\Gobbler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Player.cpp">
+    <ClCompile Include="src\GGPlayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Cell.cpp">
@@ -36,16 +33,13 @@
     <ClCompile Include="src\Board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\ResourcesManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\Rules.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\BoardState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GG_ResourceManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ResourceManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,6 +62,9 @@
     <ClInclude Include="headers\Board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="headers\ResourcesManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="headers\Rules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -77,10 +74,10 @@
     <ClInclude Include="headers\BoardState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\GG_ResourceManager.h">
+    <ClInclude Include="Headers\Piece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\ResourceManager.h">
+    <ClInclude Include="Headers\GGPlayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -88,58 +85,19 @@
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerRed_S.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerBlue_L.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerBlue_M.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerBlue_S.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerGreen_L.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerGreen_M.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerGreen_S.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerOrange_L.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerOrange_M.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerOrange_S.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerRed_L.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobblerRed_M.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobbletGobblersBoard.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_ExitButton.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_GobbletGobblersScreen.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Pictures\PNG_NewGameButton.png">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Details\ResourceManager.inl">
-      <Filter>Details</Filter>
+    <None Include="Headers\Piece.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Headers\Gobbler.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Headers\GGPlayer.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Headers\Player.inl">
+      <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
 </Project>

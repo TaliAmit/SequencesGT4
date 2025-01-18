@@ -1,10 +1,11 @@
 #pragma once
 
 #include <vector>
-#include "Gobbler.h"
-#include "Enums.h"
 
-class Player
+#include "Player.h"
+#include "enums.h"
+
+class GGPlayer: public Player<PlayerColor>
 {
 public:
     /**
@@ -12,31 +13,19 @@ public:
      * @param type The type of the Player (PlayerType type).
      * @param color The color of the Player (PlayerColor type).
      */
-    explicit Player(PlayerType type, PlayerColor color);
+    explicit GGPlayer(PlayerType type, PlayerColor color);
 
     /**
      * @brief Deleted copy constructor.
      * The Player object cannot be copied, ensuring no unexpected copies are made.
      */
-    Player(const Player&) = default; // std::vector.push_back
+    GGPlayer(const GGPlayer&) = default; // std::vector.push_back
 
     /**
      * @brief Default destructor.
      * Cleans up resources when the Player object is destroyed.
      */
-    ~Player() = default;
-
-    /**
-     * @brief Gets the type of the Player.
-     * @return The type of the Player (PlayerType type).
-     */
-    PlayerType getType() const;
-
-    /**
-     * @brief Gets the color of the Player.
-     * @return The color of the Player (PlayerColor type).
-     */
-    PlayerColor getColor() const;
+    ~GGPlayer() = default;
 
     /**
      * @brief Gets a pointer to a Gobbler in the Player's hand at the specified index.
@@ -46,17 +35,6 @@ public:
      */
     Gobbler* getGobblerFromHand(size_t index) const;
 
-    /**
-     * @brief Sets the type of the Player.
-     * @param type The type to set for the Player (PlayerType type).
-     */
-    void setType(PlayerType type);
-
-    /**
-     * @brief Sets the color of the Player.
-     * @param color The color to set for the Player (PlayerColor type).
-     */
-    void setColor(PlayerColor color);
 
     /**
      * @brief Removes a Gobbler from the Player's hand at the specified index.
@@ -97,11 +75,6 @@ private:
 private:
     std::vector<Gobbler> m_gobblers; /**< The collection of all Gobblers available to the Player. */
     std::vector<Gobbler*> m_hand;    /**< The Player's hand containing pointers to Gobblers. */
-    PlayerType m_type;               /**< The type of the Player (PlayerType type). */
-    PlayerColor m_color;             /**< The color of the Player (PlayerColor type). */
 };
 
-
-
-
-
+#include "GGPlayer.inl"
