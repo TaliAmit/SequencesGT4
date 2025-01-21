@@ -33,39 +33,9 @@ public:
      *       Make sure to use this function only with valid indices.
      */
     void incAll(size_t row, size_t col);
-
-    /**
-     * @brief Increment counter of a specified row.
-     * @param row The index of the row to increment.
-     * @note This function performs an assertion to ensure the index is within bounds.
-     *       Make sure to use this function only with valid indices.
-     */
     void incRow(size_t row);
-
-    /**
-     * @brief Increment counter of a specified column.
-     * @param col The index of the column to increment.
-     * @note This function performs an assertion to ensure the index is within bounds.
-     *       Make sure to use this function only with valid indices.
-     */
     void incCol(size_t col);
-
-    /**
-     * @brief Increment counter of the main diagonal containing the specified point.
-     * @param row The row index of the point.
-     * @param col The column index of the point.
-     * @note This function performs an assertion to ensure the indices are within bounds.
-     *       Make sure to use this function only with valid indices.
-     */
     void incMainDiagonal(size_t row, size_t col);
-
-    /**
-    * @brief Increment counter of the anti-diagonal containing the specified point.
-    * @param row The row index of the point.
-    * @param col The column index of the point.
-    * @note This function performs an assertion to ensure the indices are within bounds.
-    *       Make sure to use this function only with valid indices.
-    */
     void incAntiDiagonal(size_t row, size_t col);
 
     /**
@@ -81,39 +51,9 @@ public:
      *       Make sure to use this function only with valid indices.
      */
     void decAll(size_t row, size_t col);
-
-    /**
-     * @brief Decrement counter of a specified row.
-     * @param row The index of the row to decrement.
-     * @note This function performs an assertion to ensure the index is within bounds.
-     *       Make sure to use this function only with valid indices.
-     */
     void decRow(size_t row);
-
-    /**
-     * @brief Decrement counter of a specified column.
-     * @param col The index of the column to decrement.
-     * @note This function performs an assertion to ensure the index is within bounds.
-     *       Make sure to use this function only with valid indices.
-     */
     void decCol(size_t col);
-
-    /**
-     * @brief Decrement counter of the main diagonal containing the specified point.
-     * @param row The row index of the point.
-     * @param col The column index of the point.
-     * @note This function performs an assertion to ensure the indices are within bounds.
-     *       Make sure to use this function only with valid indices.
-     */
     void decMainDiagonal(size_t row, size_t col);
-
-    /**
-     * @brief Decrement counter of the anti-diagonal containing the specified point.
-     * @param row The row index of the point.
-     * @param col The column index of the point.
-     * @note This function performs an assertion to ensure the indices are within bounds.
-     *       Make sure to use this function only with valid indices.
-     */
     void decAntiDiagonal(size_t row, size_t col);
 
     /**

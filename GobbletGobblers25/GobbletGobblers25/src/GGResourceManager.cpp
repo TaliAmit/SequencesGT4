@@ -14,7 +14,7 @@
 GGResourceManager::GGResourceManager(SDL_Renderer* renderer)
     : ResourceManager(renderer)
 {
-    loadResources(); 
+    //loadResources(); 
 }
 
 GGResourceManager::~GGResourceManager()
@@ -64,7 +64,7 @@ void GGResourceManager::initButtonsPicsData()
 
 void GGResourceManager::initScreensPicsData()
 {
-    m_screensRes.emplace(GG_GAME_SCREAN, PictureData("pictures/PNG_GobbletGobblersScreen.png"));
+    m_screensRes.emplace(GG_GAME_SCREEN, PictureData("pictures/PNG_GobbletGobblersScreen.png"));
 }
 
 
