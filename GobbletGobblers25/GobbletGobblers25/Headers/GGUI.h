@@ -5,7 +5,6 @@
 #include "GGResourceManager.h"
 #include "enums.h"
 
-const 
 
 class GGUI : public UI
 {
