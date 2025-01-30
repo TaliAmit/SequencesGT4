@@ -101,6 +101,9 @@
     <ClInclude Include="Headers\UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png">
@@ -156,19 +159,22 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Headers\Piece.inl">
-      <Filter>Details</Filter>
-    </None>
     <None Include="Details\ResourceManager.inl">
       <Filter>Details</Filter>
     </None>
-    <None Include="Headers\Gobbler.inl">
+    <None Include="Details\Grid.inl">
       <Filter>Details</Filter>
     </None>
-    <None Include="Headers\GGPlayer.inl">
+    <None Include="Details\Piece.inl">
       <Filter>Details</Filter>
     </None>
-    <None Include="Headers\Player.inl">
+    <None Include="Details\GGPlayer.inl">
+      <Filter>Details</Filter>
+    </None>
+    <None Include="Details\Gobbler.inl">
+      <Filter>Details</Filter>
+    </None>
+    <None Include="Details\Player.inl">
       <Filter>Details</Filter>
     </None>
   </ItemGroup>

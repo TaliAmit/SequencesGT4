@@ -33,21 +33,21 @@ void GGResourceManager::loadResources()
 
 void GGResourceManager::initGobblersPicsData()
 {
-    m_gobblersRes.emplace(RED_GOBBLER_SMALL, PictureData("pictures/PNG_GobblerRed_S.png"));
-    m_gobblersRes.emplace(RED_GOBBLER_MEDIUM, PictureData("pictures/PNG_GobblerRed_M.png"));
-    m_gobblersRes.emplace(RED_GOBBLER_LARGE, PictureData("pictures/PNG_GobblerRed_L.png"));
+    m_gobblersRes.emplace(GobblerKey(RED, SMALL), PictureData("pictures/PNG_GobblerRed_S.png"));
+    m_gobblersRes.emplace(GobblerKey(RED, MEDIUM), PictureData("pictures/PNG_GobblerRed_M.png"));
+    m_gobblersRes.emplace(GobblerKey(RED, LARGE), PictureData("pictures/PNG_GobblerRed_L.png"));
 
-    m_gobblersRes.emplace(BLUE_GOBBLER_SMALL, PictureData("pictures/PNG_GobblerBlue_S.png"));
-    m_gobblersRes.emplace(BLUE_GOBBLER_MEDIUM, PictureData("pictures/PNG_GobblerBlue_M.png"));
-    m_gobblersRes.emplace(BLUE_GOBBLER_LARGE, PictureData("pictures/PNG_GobblerBlue_L.png"));
+    m_gobblersRes.emplace(GobblerKey(BLUE, SMALL), PictureData("pictures/PNG_GobblerBlue_S.png"));
+    m_gobblersRes.emplace(GobblerKey(BLUE, MEDIUM), PictureData("pictures/PNG_GobblerBlue_M.png"));
+    m_gobblersRes.emplace(GobblerKey(BLUE, LARGE), PictureData("pictures/PNG_GobblerBlue_L.png"));
 
-    m_gobblersRes.emplace(GREEN_GOBBLER_SMALL, PictureData("pictures/PNG_GobblerGreen_S.png"));
-    m_gobblersRes.emplace(GREEN_GOBBLER_MEDIUM, PictureData("pictures/PNG_GobblerGreen_M.png"));
-    m_gobblersRes.emplace(GREEN_GOBBLER_LARGE, PictureData("pictures/PNG_GobblerGreen_L.png"));
+    m_gobblersRes.emplace(GobblerKey(GREEN, SMALL), PictureData("pictures/PNG_GobblerGreen_S.png"));
+    m_gobblersRes.emplace(GobblerKey(GREEN, MEDIUM), PictureData("pictures/PNG_GobblerGreen_M.png"));
+    m_gobblersRes.emplace(GobblerKey(GREEN, LARGE), PictureData("pictures/PNG_GobblerGreen_L.png"));
 
-    m_gobblersRes.emplace(ORANGE_GOBBLER_SMALL, PictureData("pictures/PNG_GobblerOrange_S.png"));
-    m_gobblersRes.emplace(ORANGE_GOBBLER_MEDIUM, PictureData("pictures/PNG_GobblerOrange_M.png"));
-    m_gobblersRes.emplace(ORANGE_GOBBLER_LARGE, PictureData("pictures/PNG_GobblerOrange_L.png"));
+    m_gobblersRes.emplace(GobblerKey(ORANGE, SMALL), PictureData("pictures/PNG_GobblerOrange_S.png"));
+    m_gobblersRes.emplace(GobblerKey(ORANGE, MEDIUM), PictureData("pictures/PNG_GobblerOrange_M.png"));
+    m_gobblersRes.emplace(GobblerKey(ORANGE, LARGE), PictureData("pictures/PNG_GobblerOrange_L.png"));
 }
 
 void GGResourceManager::initBoardsPicsData()
@@ -85,9 +85,9 @@ void GGResourceManager::unloadResources()
 
 }
 
-SDL_Texture* GGResourceManager::getTexture(GobblerImage gobblerEnum)
+SDL_Texture* GGResourceManager::getTexture(GobblerKey gobblerKey) const
 {
-    auto it = m_gobblersRes.find(gobblerEnum);
+    auto it = m_gobblersRes.find(gobblerKey);
 
     if (it != m_gobblersRes.end())
     {
@@ -98,7 +98,7 @@ SDL_Texture* GGResourceManager::getTexture(GobblerImage gobblerEnum)
 }
 
 
-SDL_Texture* GGResourceManager::getTexture(ButtonImage buttonEnum)
+SDL_Texture* GGResourceManager::getTexture(ButtonImage buttonEnum) const
 {
     auto it = m_buttonsRes.find(buttonEnum);
 
@@ -110,7 +110,7 @@ SDL_Texture* GGResourceManager::getTexture(ButtonImage buttonEnum)
     return nullptr;
 }
 
-SDL_Texture* GGResourceManager::getTexture(BoardImage boardEnum)
+SDL_Texture* GGResourceManager::getTexture(BoardImage boardEnum) const
 {
     auto it = m_boardsRes.find(boardEnum);
 
@@ -122,7 +122,7 @@ SDL_Texture* GGResourceManager::getTexture(BoardImage boardEnum)
     return nullptr;
 }
 
-SDL_Texture* GGResourceManager::getTexture(ScreenImage screenEnum)
+SDL_Texture* GGResourceManager::getTexture(ScreenImage screenEnum) const
 {
     auto it = m_screensRes.find(screenEnum);
 

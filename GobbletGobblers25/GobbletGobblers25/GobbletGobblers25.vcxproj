@@ -75,8 +75,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(WindowsSDK_LibraryPath_x64);$(VC_LibraryPath_x64)</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <IncludePath>$(WindowsSDK_LibraryPath_x64);$(VC_LibraryPath_x64);C:\Users\talia\NotOneDrive\Desktop\programming\Projects\SequencesGT4\GobbletGobblers25\GobbletGobblers25\SDL\include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\Users\talia\NotOneDrive\Desktop\programming\Projects\SequencesGT4\GobbletGobblers25\GobbletGobblers25\SDL\lib\x64</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -194,6 +194,7 @@
     <ClInclude Include="Headers\GGPlayer.h" />
     <ClInclude Include="Headers\GGUI.h" />
     <ClInclude Include="Headers\Gobbler.h" />
+    <ClInclude Include="Headers\Grid.h" />
     <ClInclude Include="Headers\Piece.h" />
     <ClInclude Include="Headers\Player.h" />
     <ClInclude Include="Headers\Cell.h" />
@@ -225,11 +226,12 @@
     <Image Include="Resources\Pictures\PNG_transparency_demonstration_1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Details\GGPlayer.inl" />
+    <None Include="Details\Gobbler.inl" />
+    <None Include="Details\Grid.inl" />
+    <None Include="Details\Piece.inl" />
+    <None Include="Details\Player.inl" />
     <None Include="Details\ResourceManager.inl" />
-    <None Include="Headers\GGPlayer.inl" />
-    <None Include="Headers\Gobbler.inl" />
-    <None Include="Headers\Piece.inl" />
-    <None Include="Headers\Player.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

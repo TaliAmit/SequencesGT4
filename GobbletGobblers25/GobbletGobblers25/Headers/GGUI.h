@@ -6,6 +6,36 @@
 #include "enums.h"
 
 
+namespace UIPossitions
+{
+    const size_t BoardX = 100;
+    const size_t BoardY = 100;
+
+    const size_t ScreenX = 100;
+    const size_t ScreenY = 100;
+
+    const size_t LeftHandX = 100;
+    const size_t LeftHandY = 100;
+
+    const size_t RightHandX = 100;
+    const size_t RightHandY = 100;
+
+    const size_t HandGapX = 100;
+    const size_t HandGapY = 100;
+
+    const size_t BoardGapX = 100;
+    const size_t BoardGapY = 100;
+
+    const size_t ExitBtnX = 100;
+    const size_t ExitBtnY = 100;
+
+    const size_t NewGameBtnX = 100;
+    const size_t NewGameBtnY = 100;
+
+    //const size_t GapBetweenGobblers = 20;
+}
+
+
 class GGUI : public UI
 {
 public:
@@ -14,14 +44,28 @@ public:
 
     void renderScreen();
     void renderBoard();
-    void renderExitBtn();
-    void renderNewGameBtn();
     void renderButtons();
+    void renderHands();
+    void renderLeftHand(); // should it be private or not?
+    void renderRightHand(); // should it be private or not?
 
 private:
+    void renderHand(PlayerColor playerColor, int xPos, int yPos);
+    void renderButton(ButtonImage enumBtn, int xPos, int yPos);
 
+    void renderExitBtn();
+    void renderNewGameBtn(); 
+    void renderButton(ButtonImage enumBtn, SDL_Rect textureLocation);
+
+    
 private:
     GGResourceManager& m_resourceManager; // will it be better to give the general ResourceManager?
+    
+    //std::map<GobblerSize, SDL_Texture*> rightHandTextures;
+    //std::map<GobblerSize, SDL_Texture*> lefttHandTextures;
+
+    PlayerColor m_leftHandColor;   // Store left hand color
+    PlayerColor m_rightHandColor;  // Store right hand color
 };
     /*
     {
