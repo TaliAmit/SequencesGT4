@@ -185,6 +185,7 @@
     <ClCompile Include="src\GGPlayer.cpp" />
     <ClCompile Include="src\Cell.cpp" />
     <ClCompile Include="src\Board.cpp" />
+    <ClCompile Include="src\PictureData.cpp" />
     <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\Rules.cpp" />
     <ClCompile Include="src\UI.cpp" />
@@ -196,6 +197,7 @@
     <ClInclude Include="Headers\GGUI.h" />
     <ClInclude Include="Headers\Gobbler.h" />
     <ClInclude Include="Headers\Grid.h" />
+    <ClInclude Include="Headers\PictureData.h" />
     <ClInclude Include="Headers\Piece.h" />
     <ClInclude Include="Headers\Player.h" />
     <ClInclude Include="Headers\Cell.h" />
