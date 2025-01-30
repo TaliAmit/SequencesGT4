@@ -1,5 +1,5 @@
 #include "Init.h"
-#include "GGPlayer.h"
+#include "GG_Player.h"
 
 Gobbler* GGPlayer::getGobblerFromHand(size_t index) const
 {

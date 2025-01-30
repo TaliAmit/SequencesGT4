@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GGResourceManager.h"
+#include "GG_ResourceMng.h"
 
 #include <SDL_image.h>
 #include <SDL.h>

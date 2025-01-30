@@ -1,7 +1,7 @@
 #include "catch.hpp"
-#include "GGPlayer.h"
+#include "GG_Player.h"
 #include "Gobbler.h"
-#include "enums.h"
+#include "GG_Enums.h"
 #include "Init.h"
 
 // Test GGPlayer initialization (inherits from Player)

@@ -1,7 +1,7 @@
 #include "catch.hpp"
 #include "Cell.h"
 #include "Gobbler.h"
-#include "Enums.h"
+#include "GG_Enums.h"
 
 // Test for Cell initialization and empty state
 TEST_CASE("Cell Initialization", "[Cell][init]") {

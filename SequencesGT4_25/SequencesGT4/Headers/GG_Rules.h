@@ -3,8 +3,8 @@
 #include "Gobbler.h"
 #include "Cell.h"
 #include "Board.h"
-#include "GGPlayer.h"
-#include "Enums.h"
+#include "GG_Player.h"
+#include "GG_Enums.h"
 
 class Rules {
 public:

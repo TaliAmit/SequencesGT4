@@ -1,4 +1,4 @@
-#include "Rules.h"
+#include "GG_Rules.h"
 #include "Init.h"
 #include "Cell.h"
 

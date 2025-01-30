@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)GobbletGobblers25\Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SequencesGT4\Headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -91,7 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)GobbletGobblers25\Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SequencesGT4\Headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -106,7 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)GobbletGobblers25\Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SequencesGT4\Headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)GobbletGobblers25\Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SequencesGT4\Headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,13 +131,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\GobbletGobblers25\src\Board.cpp" />
-    <ClCompile Include="..\GobbletGobblers25\src\BoardState.cpp" />
-    <ClCompile Include="..\GobbletGobblers25\src\Cell.cpp" />
-    <ClCompile Include="..\GobbletGobblers25\src\Game.cpp" />
-    <ClCompile Include="..\GobbletGobblers25\src\GGPlayer.cpp" />
-    <ClCompile Include="..\GobbletGobblers25\src\Gobbler.cpp" />
-    <ClCompile Include="..\GobbletGobblers25\src\Rules.cpp" />
+    <ClCompile Include="..\SequencesGT4\src\Board.cpp" />
+    <ClCompile Include="..\SequencesGT4\src\BoardState.cpp" />
+    <ClCompile Include="..\SequencesGT4\src\Cell.cpp" />
+    <ClCompile Include="..\SequencesGT4\src\Game.cpp" />
+    <ClCompile Include="..\SequencesGT4\src\GGPlayer.cpp" />
+    <ClCompile Include="..\SequencesGT4\src\Gobbler.cpp" />
+    <ClCompile Include="..\SequencesGT4\src\Rules.cpp" />
     <ClCompile Include="BoardStateTests.cpp" />
     <ClCompile Include="BoardTests.cpp" />
     <ClCompile Include="CellTests.cpp" />
@@ -150,11 +150,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="catch.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GobbletGobblers25\GobbletGobblers25.vcxproj">
-      <Project>{8769f4e2-69d7-4d44-9916-7d4b6d5b4aff}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

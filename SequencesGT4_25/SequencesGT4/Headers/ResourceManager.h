@@ -5,7 +5,7 @@
 #include <map>
 #include <SDL_image.h>
 #include <SDL.h>
-#include "Enums.h"
+#include "GG_Enums.h"
 #include "PictureData.h"
 
 

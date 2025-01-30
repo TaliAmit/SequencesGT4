@@ -3,7 +3,7 @@
 #include <vector>
 
 #include "Player.h"
-#include "enums.h"
+#include "GG_Enums.h"
 
 class GGPlayer: public Player<PlayerColor>
 {

@@ -1,6 +1,6 @@
 #include "catch.hpp"
 #include "Piece.h"
-#include "enums.h"
+#include "GG_Enums.h"
 
 // Test Piece initialization
 TEST_CASE("Piece Initialization", "[Piece][init]") {

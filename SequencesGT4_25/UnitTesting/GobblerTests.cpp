@@ -1,6 +1,6 @@
 #include "catch.hpp"
 #include "Gobbler.h"
-#include "enums.h"
+#include "GG_Enums.h"
 
 // Test Gobbler initialization with color and size (inherits from Piece)
 TEST_CASE("Gobbler Initialization", "[Gobbler][init]") {

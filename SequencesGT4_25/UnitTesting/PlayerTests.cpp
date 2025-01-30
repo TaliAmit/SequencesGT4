@@ -1,6 +1,6 @@
 #include "catch.hpp"
-#include "Player.h"
-#include "enums.h"
+#include "GG_Player.h"
+#include "GG_Enums.h"
 
 // Test Player initialization
 TEST_CASE("Player Initialization", "[Player][init]") {

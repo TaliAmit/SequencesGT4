@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Piece.h"
-#include "Enums.h"
+#include "GG_Enums.h"
 
 
 class Gobbler: public Piece<PlayerColor>

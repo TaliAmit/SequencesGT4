@@ -59,7 +59,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\Game.h">
+    <ClInclude Include="Headers\GG_Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\Gobbler.h">
@@ -68,7 +68,7 @@
     <ClInclude Include="headers\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\Enums.h">
+    <ClInclude Include="Headers\GG_Enums.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\Cell.h">
@@ -77,7 +77,7 @@
     <ClInclude Include="headers\Board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\Rules.h">
+    <ClInclude Include="Headers\GG_Rules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\Init.h">
@@ -89,16 +89,16 @@
     <ClInclude Include="Headers\Piece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\GGPlayer.h">
+    <ClInclude Include="Headers\GG_Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\GGResourceManager.h">
+    <ClInclude Include="headers\GG_ResourceMng.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\ResourceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\GGUI.h">
+    <ClInclude Include="Headers\GG_UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\UI.h">

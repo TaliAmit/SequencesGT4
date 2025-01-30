@@ -1,10 +1,10 @@
 #include "catch.hpp"
-#include "Rules.h"
+#include "GG_Rules.h"
 #include "Board.h"
 #include "Cell.h"
 #include "Gobbler.h"
-#include "GGPlayer.h"
-#include "Enums.h"
+#include "GG_Player.h"
+#include "GG_Enums.h"
 
 // Test canPlaceGobblerInCell (placing Gobbler in empty cell)
 TEST_CASE("canPlaceGobblerInCell - Empty Cell", "[Rules][Gobbler][place]") {

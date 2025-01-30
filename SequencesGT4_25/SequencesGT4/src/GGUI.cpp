@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GGUI.h"
+#include "GG_UI.h"
 
 #include <map>
 #include <vector>
@@ -9,8 +9,8 @@
 
 #include "UI.h"
 #include "ResourceManager.h"
-#include "GGResourceManager.h"
-#include "enums.h"
+#include "GG_ResourceMng.h"
+#include "GG_Enums.h"
 #include "init.h"
 
 

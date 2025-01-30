@@ -2,7 +2,7 @@
 #include "Board.h"
 #include "Cell.h"
 #include "Gobbler.h"
-#include "Enums.h"
+#include "GG_Enums.h"
 
 // Test Board initialization
 TEST_CASE("Board Initialization", "[Board][get][init]") {

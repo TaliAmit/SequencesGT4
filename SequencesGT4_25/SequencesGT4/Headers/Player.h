@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Gobbler.h"
-#include "Enums.h"
+#include "GG_Enums.h"
 
 
 template<typename T>
