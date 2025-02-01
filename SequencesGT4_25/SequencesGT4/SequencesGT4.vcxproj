@@ -177,21 +177,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\BoardState.cpp" />
+    <ClCompile Include="src\GGGame.cpp" />
     <ClCompile Include="src\GGResourceManager.cpp" />
     <ClCompile Include="src\GGUI.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\SDLGame.cpp" />
     <ClCompile Include="src\Gobbler.cpp" />
     <ClCompile Include="src\GGPlayer.cpp" />
     <ClCompile Include="src\Cell.cpp" />
     <ClCompile Include="src\Board.cpp" />
     <ClCompile Include="src\PictureData.cpp" />
     <ClCompile Include="src\ResourceManager.cpp" />
-    <ClCompile Include="src\Rules.cpp" />
+    <ClCompile Include="src\GGRules.cpp" />
     <ClCompile Include="src\UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\BoardState.h" />
+    <ClInclude Include="Headers\SDLGame.h" />
     <ClInclude Include="Headers\GG_Game.h" />
     <ClInclude Include="Headers\GG_Player.h" />
     <ClInclude Include="Headers\GG_UI.h" />

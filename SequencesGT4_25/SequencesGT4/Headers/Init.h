@@ -2,6 +2,9 @@
 
 namespace GameConstants
 {
+	const int WINDOW_WIDTH = 1200;
+	const int WINDOW_HEIGHT = 800;
+
 	const size_t MIN_ROWS = 3;
 	const size_t MIN_COLS = 3;
 

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cassert> // assert
 #include "Grid.h"
 #include "Piece.h"
 
@@ -49,5 +50,5 @@ inline size_t Grid<T>::getCols() const
 template<typename T>
 inline void Grid<T>::validateIndices(size_t rows, size_t cols) const
 {
-	assert(row < m_rows && col < m_cols);
+	assert(rows < m_rows && cols < m_cols);
 }

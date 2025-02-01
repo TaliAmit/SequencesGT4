@@ -7,7 +7,7 @@
 #include "Game.h"
 #include "Rules.h"
 
-Game::Game() 
+Game::Game()
     : m_players()
     , m_board(3, 3)
     , m_isRunning(false) // true?

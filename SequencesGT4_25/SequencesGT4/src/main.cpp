@@ -1,7 +1,13 @@
+#pragma once
+
 #include <SDL.h>
 #include <SDL_image.h>
+
 #include <iostream>
 #include <windows.h> //GetCurrentDirectory
+
+#include "SDLGame.h"
+#include "GG_Game.h"
 
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
@@ -24,6 +30,8 @@ void printCurrentWorkingDirectory() {
 
 int main(int argc, char* argv[])
 {
+    //GGGame game(1, 2, 3, 4);
+
     SDL_Window* window = NULL;
     SDL_Renderer* renderer = NULL;
     SDL_Texture* texture = NULL;

@@ -1,24 +1,33 @@
 #pragma once
-#include <memory>
-#include "Board.h"
-#include "Rules.h"
-#include "Player.h"
-//#include "UIManager.h"  
-/*
-class Game
+#include <memory> //?
+#include <map>
+#include <vector>
+
+#include <SDL_image.h>
+#include <SDL.h>
+
+#include "SDLGame.h"
+#include "Grid.h"
+#include "Cell.h"
+#include "GG_Rules.h"
+#include "GG_Player.h"
+#include "GG_ResourceMng.h"
+#include "GG_UI.h"
+#include "GG_Enums.h"
+
+class GGGame : public SDLGame
 {
 public:
-    explicit Game();
-    ~Game() = default;
+    explicit GGGame();
+    ~GGGame() = default;
 
-    void run(); // main game loop
     void handleEvents(SDL_Event& e);
 
 private:
-    // void handleMouseEvent(const SDL_Event& event); // handle mouse events
+    // gvoid handleMouseEvent(const SDL_Event& event);
     void update(); // game status update
-    //void render(); // display game graphics
-    // void reset();
+    void render(); // display game graphics
+    void reset();
 
 
     // bool handlePlayerAction(Player& player, const SDL_Point& mousePosition); // handle mouse action
@@ -27,15 +36,17 @@ private:
     void initPlayers();
 
 private:
-    Board m_board;
-    std::vector<Player> m_players;
+    std::vector<GGPlayer> m_players;
+    Grid<Cell> m_board;
+    std::map<PlayerColor, Grid<Gobbler*>> m_hands;
+    
     size_t m_numOfPlayers;
-    bool m_isRunning;
-    size_t m_currentPlayerIdx;
+    //size_t m_currentPlayerIdx;
+    PlayerColor m_currentPlayerColor;
+
     bool m_isGoblerTakenFromHand;
 
-    std::unique_ptr<Rules> m_rules;
-    //ResourcesManager m_resourceManager;
-    // UIManager& m_uiManager;
+    std::unique_ptr<GGRules> m_rules;
+    std::unique_ptr <GGResourceManager> m_resourceManager;
+    GGUI& m_UI;
 };
-*/

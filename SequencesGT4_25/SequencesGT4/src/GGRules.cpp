@@ -4,14 +4,14 @@
 
 #include <cassert>
 
-Rules::Rules(const Board& board)
+GGRules::GGRules(const Board& board)
 : m_board{ board }
 , m_rows{ m_board.getRows()}
 , m_cols{ m_board.getCols()}
 {
 }
 
-bool Rules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t row, size_t col) const
+bool GGRules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t row, size_t col) const
 {
     assert(gobbler != nullptr);
     
@@ -24,7 +24,7 @@ bool Rules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t row, size_t col
     return gobbler->getSize() > existingGobbler->getSize();
 }
 
-bool Rules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t fromRow, size_t fromCol, size_t toRow, size_t toCol) const
+bool GGRules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t fromRow, size_t fromCol, size_t toRow, size_t toCol) const
 {
     if (fromRow == toRow && fromCol == toCol)
     {
@@ -35,14 +35,14 @@ bool Rules::canPlaceGobblerInCell(const Gobbler* gobbler, size_t fromRow, size_t
 }
 
 
-bool Rules::canPlayerTakeGobbler(const GGPlayer& player, const Gobbler* gobbler) const
+bool GGRules::canPlayerTakeGobbler(const GGPlayer& player, const Gobbler* gobbler) const
 {
     assert(gobbler != nullptr);
     return player.getIdentifier() == gobbler->getIdentifier();
 }
 
 // should change to player identifier
-PlayerColor Rules::checkWinner(size_t row, size_t col) const 
+PlayerColor GGRules::checkWinner(size_t row, size_t col) const
 {
     PlayerColor winner = checkRowWinner(row, col);
     if (winner != NONE)
@@ -68,7 +68,7 @@ PlayerColor Rules::checkWinner(size_t row, size_t col) const
 
 
 
-PlayerColor Rules::checkRowWinner(size_t row, size_t col) const
+PlayerColor GGRules::checkRowWinner(size_t row, size_t col) const
 {
     assert(row < m_rows && col < m_cols);
     
@@ -121,7 +121,7 @@ PlayerColor Rules::checkRowWinner(size_t row, size_t col) const
 }
 
 
-PlayerColor Rules::checkColWinner(size_t row, size_t col) const
+PlayerColor GGRules::checkColWinner(size_t row, size_t col) const
 {
     assert(row < m_rows && col < m_cols);
     
@@ -173,7 +173,7 @@ PlayerColor Rules::checkColWinner(size_t row, size_t col) const
     }
 }
 
-PlayerColor Rules::checkMainDiagonalWinner(size_t row, size_t col) const
+PlayerColor GGRules::checkMainDiagonalWinner(size_t row, size_t col) const
 {
     assert(row < m_rows && col < m_cols);
     
@@ -225,7 +225,7 @@ PlayerColor Rules::checkMainDiagonalWinner(size_t row, size_t col) const
     }
 }
 
-PlayerColor Rules::checkAntiDiagonalWinner(size_t row, size_t col) const
+PlayerColor GGRules::checkAntiDiagonalWinner(size_t row, size_t col) const
 {
     assert(row < m_rows && col < m_cols);
     
